@@ -63,7 +63,7 @@
 				<sum>
 					<property>/accelerations/pilot-gdamped</property>
 					<div>
-						<value>1</value>
+						<value>-1</value>
 						<cos>
 							<deg2rad>
 								<product>
@@ -73,7 +73,7 @@
 							</deg2rad>
 						</cos>
 					</div>
-					<value>-1</value>
+					<value>1</value>
 				</sum>
 			</expression>
 		</input>
@@ -566,6 +566,7 @@
 		<name>IT-CONTROLLER: PITCH TRIM</name>
 		<debug>false</debug>
 		<initialize-to>output</initialize-to>
+		<type>noise-spike</type>
 		<enable>
 			<condition>
 				<and>
@@ -611,7 +612,6 @@
 							</equals>
 						</and>
 					</or>
-
 					<less-than>
 						<property>/orientation/roll-deg</property>
 						<value>40</value>
@@ -660,7 +660,8 @@
 			<value>-1</value>
 		</input>
 		<output>/controls/flight/elevator-trim</output>
-		<type>noise-spike</type>
+		<min>-1.0</min>
+		<max>0.32</max>
 		<max-rate-of-change>0.01</max-rate-of-change>
 	</filter>
 
