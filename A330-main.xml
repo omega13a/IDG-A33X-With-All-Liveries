@@ -1401,7 +1401,6 @@
 		<libraries>
 			<file>Aircraft/IDG-A33X/Nasal/libraries.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/buttons.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/gpws.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/efis.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/ECAM.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/shake.nas</file>
@@ -1419,9 +1418,9 @@
 			<file>Aircraft/IDG-A33X/Nasal/fire.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/brakes.nas</file>
 		</systems>
-		<thrust>
+		<fadec>
 			<file>Aircraft/IDG-A33X/Nasal/fadec-common.nas</file>
-		</thrust>
+		</fadec>
 		<fbw>
 			<file>Aircraft/IDG-A33X/Nasal/it-fbw.nas</file>
 		</fbw>
