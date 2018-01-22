@@ -105,7 +105,7 @@
 
 	<!-- Multi-purpose Control and Display Units -->
 	<model>
-		<path>Aircraft/IDG-A32X/Models/Instruments/MCDU/MCDU1.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Instruments/MCDU/MCDU1.xml</path>
 		<offsets>
 			<x-m>-0.35794</x-m>
 			<y-m>-0.18632</y-m>
@@ -115,7 +115,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/IDG-A32X/Models/Instruments/MCDU/MCDU2.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Instruments/MCDU/MCDU2.xml</path>
 		<offsets>
 			<x-m>-0.35794</x-m>
 			<y-m>0.18632</y-m>
@@ -4730,6 +4730,20 @@
 			<green>0.725</green>
 			<blue>0.259</blue>
 			<factor-prop>controls/lighting/fcu-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<!-- Overhead Panel-2 lighting -->
+	<animation>
+		<name>Overhead Panel-2 lighting</name>
+		<type>material</type>
+		<object-name>ohpanel2_knob.mark</object-name>
+		<object-name>ohpanel2_illu</object-name>
+		<emission>
+			<red>1</red>
+			<green>0.824</green>
+			<blue>0.518</blue>
+			<factor-prop>controls/lighting/overhead-panel-norm</factor-prop>
 		</emission>
 	</animation>
 	
