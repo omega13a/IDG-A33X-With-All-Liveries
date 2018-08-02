@@ -10,7 +10,7 @@
 
 	<sim>
 
-		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Thorsten Herrmann (TH-555)</author>
+		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Thorsten Herrmann (TH-555), J Maverick 16</author>
 		
 		<status>Pre V1.0</status>
 		
@@ -200,6 +200,15 @@
 							<command>nasal</command>
 							<script>
 							aircraft.livery.dialog.toggle();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Ground Services</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							acconfig.groundservices_dlg.open();
 							</script>
 						</binding>
 					</item>
@@ -681,6 +690,14 @@
 			<wowa type="bool">1</wowa>
 		</gear>
 	</gear>
+	
+	<services n="0">
+		<chokes n="0">
+			<nose type="bool">0</nose>
+			<left type="bool">0</left>
+			<right type="bool">0</right>
+		</chokes>
+	</services>
 	
 	<systems>
 		<failures n="0">
