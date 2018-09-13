@@ -116,20 +116,20 @@ var HYD = {
 		yellow_pump_elec_fail = getprop("/systems/failures/pump-yellow-elec");
 		dc2 = getprop("/systems/electrical/bus/dc2");
 
-		if ((rat_man_sw == 1 or getprop("/controls/electrical/switches/emer-gen") == 1) and (gs > 100)) {
+		if ((rat_man_sw == 1 or getprop("/controls/electrical/switches/emer-gen") == 1) and gs > 100) {
 			setprop("/controls/hydraulic/rat", 1);
 			setprop("/controls/hydraulic/rat-deployed", 1);
 		} else if (gs < 100) {
 			setprop("/controls/hydraulic/rat", 0);
 		}
 		
-		if ((eng1_pump_blue_sw and stateL == 3 and !blue_pump_eng_fail) and !blue_leak) {
+		if (eng1_pump_blue_sw and stateL == 3 and !blue_pump_eng_fail and !blue_leak) {
 			if (green_psi < 2900) {
 				setprop("/systems/hydraulic/blue-psi", blue_psi + 50);
 			} else {
 				setprop("/systems/hydraulic/blue-psi", 3000);
 			}
-		} else if ((elec_pump_blue_sw and dc_ess >= 25 and !blue_pump_elec_fail) and (stateL == 3 or stateR == 3 or getprop("/gear/gear[0]/wow") == 0) and !blue_leak) {
+		} else if (elec_pump_blue_sw and dc_ess >= 25 and !blue_pump_elec_fail and (stateL == 3 or stateR == 3 or getprop("/gear/gear[0]/wow") == 0) and !blue_leak) {
 			if (blue_psi < 2900) {
 				setprop("/systems/hydraulic/blue-psi", blue_psi + 50);
 			} else {
@@ -149,19 +149,19 @@ var HYD = {
 			}
 		}
 		
-		if ((eng1_pump_green_sw and stateL == 3 and !green_pump_eng_fail) and !green_leak) {
+		if (eng1_pump_green_sw and stateL == 3 and !green_pump_eng_fail and !green_leak) {
 			if (green_psi < 2900) {
 				setprop("/systems/hydraulic/green-psi", green_psi + 50);
 			} else {
 				setprop("/systems/hydraulic/green-psi", 3000);
 			}
-		} else if ((eng2_pump_green_sw and stateR == 3 and !green_pump_eng2_fail) and !green_leak) {
+		} else if (eng2_pump_green_sw and stateR == 3 and !green_pump_eng2_fail and !green_leak) {
 			if (green_psi < 2900) {
 				setprop("/systems/hydraulic/green-psi", green_psi + 50);
 			} else {
 				setprop("/systems/hydraulic/green-psi", 3000);
 			}
-		} else if ((elec_pump_green_sw and dc_ess >= 25 and !green_pump_elec_fail) and (stateL == 3 or stateR == 3) and !green_leak) {
+		} else if (elec_pump_green_sw and dc_ess >= 25 and !green_pump_elec_fail and (stateL == 3 or stateR == 3) and !green_leak) {
 			if (green_psi < 2900) {
 				setprop("/systems/hydraulic/green-psi", green_psi + 50);
 			} else {
@@ -175,13 +175,13 @@ var HYD = {
 			}
 		}
 		
-		if ((eng2_pump_yellow_sw and stateR == 3 and !yellow_pump_eng_fail) and !yellow_leak) {
+		if (eng2_pump_yellow_sw and stateR == 3 and !yellow_pump_eng_fail and !yellow_leak) {
 			if (yellow_psi < 2900) {
 				setprop("/systems/hydraulic/yellow-psi", yellow_psi + 50);
 			} else {
 				setprop("/systems/hydraulic/yellow-psi", 3000);
 			}
-		} else if ((elec_pump_yellow_sw and dc_ess >= 25 and !yellow_pump_elec_fail) and (stateL == 3 or stateR == 3) and !yellow_leak) {
+		} else if (elec_pump_yellow_sw and dc_ess >= 25 and !yellow_pump_elec_fail and (stateL == 3 or stateR == 3) and !yellow_leak) {
 			if (yellow_psi < 2900) {
 				setprop("/systems/hydraulic/yellow-psi", yellow_psi + 50);
 			} else {
