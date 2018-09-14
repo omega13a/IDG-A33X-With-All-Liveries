@@ -152,7 +152,6 @@ var canvas_IESI = {
 		}
 		
 		# Attitude
-		
 		me.AI_horizon_trans.setTranslation(0, pitch.getValue() * 16.74);
 		me.AI_horizon_rot.setRotation(-roll.getValue() * D2R, me["AI_center"].getCenter());
 		
@@ -179,7 +178,7 @@ var canvas_IESI = {
 		
 		me["ALT_digits"].setText(sprintf("%s", altitude_ind.getValue()));
 		me["ALT_meters"].setText(sprintf("%5.0f", me.altitude * 0.3048));
-		altTens = num(right(sprintf("%02d", altitude_ind.getValue()), 2));
+		altTens = num(right(sprintf("%02d", altitude.getValue()), 2));
 		me["ALT_tens"].setTranslation(0, altTens * 3.16);
 		
 		# QNH
