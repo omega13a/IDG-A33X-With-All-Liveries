@@ -11,6 +11,8 @@ var elapsedtime = 0;
 var ASI = 0;
 var alt = 0;
 var altTens = 0;
+var airspeed_act = 0;
+var mach_act = 0;
 
 # props.nas nodes
 var iesi_init = props.globals.initNode("/instrumentation/iesi/iesi-init", 0, "BOOL");

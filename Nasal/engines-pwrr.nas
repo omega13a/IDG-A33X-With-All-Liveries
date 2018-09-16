@@ -157,10 +157,10 @@ var fast_start_two = func {
 	setprop("/engines/engine[1]/cutoff", 0);
 	setprop("/engines/engine[1]/starter", 0);
 
-	setprop("/fdm/jsbsim/propulsion/set-running", 0);
+	setprop("/fdm/jsbsim/propulsion/set-running", 1);
 	
 	setprop("/engines/engine[1]/state", 3);
-	setprop("/systems/pneumatic/eng1-starter", 0);
+	setprop("/systems/pneumatic/eng2-starter", 0);
 }
 
 setlistener("/controls/engines/engine[1]/man-start", func {
