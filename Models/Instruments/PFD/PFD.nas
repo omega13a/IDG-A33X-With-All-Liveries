@@ -217,7 +217,7 @@ var canvas_PFD_base = {
 		}
 		
 		if (ac2.getValue() >= 110) {
-			if (acconfig.getValue != 1 and du6_test.getValue() != 1) {
+			if (acconfig.getValue() != 1 and du6_test.getValue() != 1) {
 				du6_test.setValue(1);
 				du6_test_amount.setValue(math.round((rand() * 5 ) + 35, 0.1));
 				du6_test_time.setValue(elapsedtime_act);
