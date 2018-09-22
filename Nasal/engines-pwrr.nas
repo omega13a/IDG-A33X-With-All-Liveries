@@ -130,19 +130,24 @@ setlistener("/controls/engines/engine[1]/cutoff-switch", func {
 			}
 		}
 	} else if (getprop("/controls/engines/engine[1]/cutoff-switch") == 1) {
-		eng_two_auto_start.stop();
-		eng_two_man_start.stop();
-		eng_two_n2_check.stop();
-		setprop("/controls/engines/engine[1]/igniter-a", 0);
-		setprop("/controls/engines/engine[1]/igniter-b", 0);
-		setprop("/controls/engines/engine[1]/man-start", 0);
-		setprop("/systems/pneumatic/eng2-starter", 0);
-		setprop("/controls/engines/engine[1]/starter", 0);
-		setprop("/controls/engines/engine[1]/cutoff", 1);
-		setprop("/engines/engine[1]/state", 0);
-		interpolate(engines[1].getNode("egt-actual"), 0, egt_shutdown_time);
+		cutoff_two();
 	}
 });
+
+var cutoff_two = func {
+	eng_two_auto_start.stop();
+	eng_two_man_start.stop();
+	eng_two_n2_check.stop();
+	setprop("/controls/engines/engine[1]/igniter-a", 0);
+	setprop("/controls/engines/engine[1]/igniter-b", 0);
+	setprop("/controls/engines/engine[1]/man-start", 0);
+	setprop("/systems/pneumatic/eng1-starter", 0);
+	setprop("/controls/engines/engine[1]/starter", 0);
+	setprop("/controls/engines/engine[1]/cutoff", 1);
+	setprop("/engines/engine[1]/state", 0);
+	interpolate(engines[1].getNode("egt-actual"), 0, egt_shutdown_time);
+	eng_two_n2_check.stop();
+}
 
 var fast_start_two = func {
 	setprop("/controls/engines/engine[1]/cutoff", 0);
@@ -165,12 +170,12 @@ setlistener("/controls/engines/engine[1]/man-start", func {
 var start_two_mancheck = func {
 	if (getprop("/controls/engines/engine[1]/man-start") == 1) {
 		if (getprop("/controls/engines/engine-start-switch") == 2 and (getprop("/controls/engines/engine[1]/cutoff-switch") == 1)) {
-			setprop("/systems/pneumatic/eng2-starter", 1);
+			setprop("/systems/pneumatic/eng1-starter", 1);
 			settimer(start_two_mancheck_b, 0.5);
 		}
 	} else {
 		if (getprop("/engines/engine[1]/state") == 1 or getprop("/engines/engine[1]/state") == 2) {
-			setprop("/systems/pneumatic/eng2-starter", 0);
+			setprop("/systems/pneumatic/eng1-starter", 0);
 			setprop("/engines/engine[1]/state", 0);
 			setprop("/controls/engines/engine[1]/starter", 0);
 		}
@@ -186,7 +191,7 @@ var start_two_mancheck_b = func {
 
 var start_two_check = func {
 	if (getprop("/controls/engines/engine-start-switch") == 2 and getprop("/controls/engines/engine[1]/cutoff-switch") == 0) {
-		setprop("/systems/pneumatic/eng2-starter", 1);
+		setprop("/systems/pneumatic/eng1-starter", 1);
 		settimer(start_two_check_b, 0.5);
 	}
 }
