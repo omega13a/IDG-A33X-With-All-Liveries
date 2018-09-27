@@ -189,6 +189,7 @@ var systemsInit = func {
 	libraries.ECAM.init();
 	libraries.BUTTONS.init();
 	libraries.variousReset();
+	rmp.init();
 }
 
 setlistener("/sim/signals/fdm-initialized", func {
