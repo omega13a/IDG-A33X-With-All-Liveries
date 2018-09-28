@@ -624,6 +624,7 @@
 				<blue-elec type="bool">0</blue-elec>
 				<blue-eng1 type="bool">0</blue-eng1>
 				<ditching type="bool">0</ditching>
+				<elecratman type="bool">0</elecratman>
 				<eng1-manstart type="bool">0</eng1-manstart>
 				<eng2-manstart type="bool">0</eng2-manstart>
 				<eng1-n1 type="bool">0</eng1-n1>
