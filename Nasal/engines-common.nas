@@ -65,6 +65,9 @@ setlistener("/controls/APU/master", func {
 		apu_egt_check.stop();
 		apu_egt2_check.stop();
 		apu_stop();
+	} else if (getprop("/controls/APU/master") = 1) {
+		apuBleedChk.stop();
+		setprop("/systems/apu/bleed-counting", 0);
 	}
 });
 
