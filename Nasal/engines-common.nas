@@ -27,7 +27,9 @@ var eng_common_init = func {
 
 # Start APU
 setlistener("/controls/APU/start", func {
-	if ((getprop("/controls/APU/master") == 1) and (getprop("/controls/APU/start") == 1)) {
+	if (getprop("/controls/APU/master") == 1 and getprop("/controls/APU/start") == 1) {
+		apuBleedChk.stop();
+		setprop("/systems/apu/bleed-counting", 0);
 		if (getprop("/systems/acconfig/autoconfig-running") == 0) {
 			interpolate("/systems/apu/rpm", apu_max, spinup_time);
 			apu_egt_check.start();
