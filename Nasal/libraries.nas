@@ -176,6 +176,7 @@ var systemsInit = func {
 	systems.eng_init();
 	systems.fire_init();
 	systems.autobrake_init();
+	fadec.FADEC.init();
   	fmgc.APinit();			
 	fmgc.FMGCinit();
 	mcdu1.MCDU_init();
@@ -204,7 +205,7 @@ var systemsLoop = maketimer(0.1, func {
 	systems.ADIRS.loop();
 	libraries.ECAM.loop();
 	libraries.BUTTONS.update();
-	fadec.fadecLoop();
+	fadec.FADEC.loop();
 	
 	if ((getprop("/controls/pneumatic/switches/groundair") or getprop("/controls/switches/cart")) and ((getprop("/velocities/groundspeed-kt") > 2) or getprop("/controls/gear/brake-parking") == 0)) {
 		setprop("/controls/switches/cart", 0);
