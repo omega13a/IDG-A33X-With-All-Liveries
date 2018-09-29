@@ -116,7 +116,7 @@ var HYD = {
 		yellow_pump_elec_fail = getprop("/systems/failures/pump-yellow-elec");
 		dc2 = getprop("/systems/electrical/bus/dc2");
 
-		if ((rat_man_sw == 1 or getprop("/controls/electrical/switches/emer-gen") == 1) and gs > 100) {
+		if ((rat_man_sw == 1 or getprop("/controls/electrical/switches/emer-gen") == 1) and gs >= 100) {
 			setprop("/controls/hydraulic/rat", 1);
 			setprop("/controls/hydraulic/rat-deployed", 1);
 		} else if (gs < 100) {
