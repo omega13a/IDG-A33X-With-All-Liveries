@@ -15,7 +15,7 @@
 		<path>Aircraft/IDG-A33X/Models/A330-243-main.xml</path>
 	</model>
 
-<!-- LIVERY SELECT -->
+	<!-- LIVERY SELECT -->
 	<!-- Animation -->
 	<animation>
 		<type>material</type>
@@ -46,10 +46,10 @@
 	<!-- Nasal code -->
 	<nasal>
 		<load>
-		 var livery_update = aircraft.livery_update.new("Aircraft/IDG-A33X/Models/Liveries/A332RR/");
+			var livery_update = aircraft.livery_update.new("Aircraft/IDG-A33X/Models/Liveries/A332RR/");
 		</load>
 		<unload>
-		 livery_update.stop();
+			livery_update.stop();
 		</unload>
 	</nasal>
 
