@@ -114,6 +114,10 @@
 				<type>double</type>
 				<property>/fdm/jsbsim/hydraulics/spoiler-r6/final-deg</property>
 			</signal>
+			<signal>
+				<type>double</type>
+				<property>/aircraft/wingflex</property>
+			</signal>
 		</signals>
 	</config>
 
