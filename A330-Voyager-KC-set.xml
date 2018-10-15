@@ -17,6 +17,7 @@
 		<description>Airbus Voyager KC2/KC3 (RR Trent 772C-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-Voyager-KC</aero>
+		<primary-set>true</primary-set>
 		<model>
 			<path>Aircraft/IDG-A33X/Models/Voyager-KC.xml</path>
 			<livery>

@@ -17,6 +17,7 @@
 		<description>Airbus A330-303 (GE CF6-80E1)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-300-GE</aero>
+		<variant-of>A330-300-PW</variant-of>
 		<model>
 			<path>Aircraft/IDG-A33X/Models/A330-300-GE.xml</path>
 			<livery>

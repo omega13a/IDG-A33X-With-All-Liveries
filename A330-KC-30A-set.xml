@@ -17,6 +17,7 @@
 		<description>Airbus KC-30A (GE CF6-80E1A3)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-KC-30A</aero>
+		<variant-of>A330-Voyager-KC</variant-of>
 		<model>
 			<path>Aircraft/IDG-A33X/Models/KC-30A.xml</path>
 			<livery>

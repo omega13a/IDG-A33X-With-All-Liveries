@@ -17,6 +17,7 @@
 		<description>Airbus A330-243 (RR Trent 772B-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200-RR</aero>
+		<variant-of>A330-200-PW</variant-of>
 		<model>
 			<path>Aircraft/IDG-A33X/Models/A330-200-RR.xml</path>
 			<livery>

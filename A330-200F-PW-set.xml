@@ -17,6 +17,7 @@
 		<description>Airbus A330-223F (PW4170)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200F-PW</aero>
+		<primary-set>true</primary-set>
 		<model>
 			<path>Aircraft/IDG-A33X/Models/A330-200F-PW.xml</path>
 			<livery>
