@@ -81,16 +81,17 @@
 		</offsets>
 	</model>
 
-	<!-- VOR Instrument -->
-	<!--model>
-		<path>Aircraft/IDG-A33X/Models/Instruments/VOR/VOR.xml</path>
+	<!-- DDRMI Instrument -->
+	<model>
+		<path>Aircraft/IDG-A33X/Models/Instruments/DDRMI/DDRMI.xml</path>
 		<offsets>
-			<x-m>-0.51846</x-m>
-			<y-m>-0.14098</y-m>
-			<z-m>0.10572</z-m>
-			<pitch-deg>-16.534</pitch-deg>
+			<x-m>-0.516286</x-m>
+			<y-m>-0.142488</y-m>
+			<z-m>0.098057</z-m>
+			<heading-deg>90</heading-deg>
+			<roll-deg>73.5</roll-deg>
 		</offsets>
-	</model-->
+	</model>
 
 	<!-- Brakes Pressure Indicator -->
 	<model>
