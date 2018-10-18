@@ -1905,13 +1905,12 @@
 		
 		<pure_gain name="fcs/flap-pos-gain">
 			<input>/controls/flight/flaps</input>
-			<gain>30.0</gain>
+			<gain>35.0</gain>
 		</pure_gain>
 		
 		<switch name="fcs/flap-pos-rate">
 			<default value="0.0"/>
-			<test logic="OR" value="0.85714285">
-				/systems/hydraulic/blue-psi ge 1500
+			<test logic="OR" value="1.16666666">
 				/systems/hydraulic/green-psi ge 1500
 				/systems/hydraulic/yellow-psi ge 1500
 			</test>
@@ -1947,9 +1946,10 @@
 		
 		<switch name="fcs/slat-pos-rate">
 			<default value="0.0"/>
-			<test logic="OR" value="0.74074074">
+			<test logic="OR" value="1.35">
 				/systems/hydraulic/blue-psi ge 1500
 				/systems/hydraulic/green-psi ge 1500
+				/systems/hydraulic/yellow-psi ge 1500
 			</test>
 		</switch>
 		
