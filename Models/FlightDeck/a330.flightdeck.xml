@@ -2666,14 +2666,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis/input/vor-adf-1</property>
-				<value>0</value> <!-- OFF -->
-				<value>1</value> <!-- VOR -->
-				<value>2</value> <!-- ADF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis/input/lh-vor-adf</property>
+				<property>instrumentation/efis[0]/input/lh-vor-adf</property>
 				<value>0</value> <!-- OFF -->
 				<value>1</value> <!-- VOR -->
 				<value>-1</value> <!-- ADF -->
@@ -2684,14 +2677,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis/input/vor-adf-1</property>
-				<value>2</value> <!-- ADF -->
-				<value>1</value> <!-- VOR -->
-				<value>0</value> <!-- OFF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis/input/lh-vor-adf</property>
+				<property>instrumentation/efis[0]/input/lh-vor-adf</property>
 				<value>-1</value> <!-- ADF -->
 				<value>1</value> <!-- VOR -->
 				<value>0</value> <!-- OFF -->
@@ -2701,7 +2687,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>vor-adf-1</object-name>
-		<property>instrumentation/efis/input/lh-vor-adf</property>
+		<property>instrumentation/efis[0]/input/lh-vor-adf</property>
 		<interpolation>
 			<entry><ind>-1</ind><dep>-25</dep></entry>
 			<entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2720,13 +2706,6 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis[1]/input/vor-adf-1</property>
-				<value>0</value> <!-- OFF -->
-				<value>1</value> <!-- VOR -->
-				<value>2</value> <!-- ADF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/lh-vor-adf</property>
 				<value>0</value> <!-- OFF -->
 				<value>1</value> <!-- VOR -->
@@ -2736,13 +2715,6 @@
 		<action>
 			<button>1</button>
 			<repeatable type="bool">false</repeatable>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis[1]/input/vor-adf-1</property>
-				<value>2</value> <!-- ADF -->
-				<value>1</value> <!-- VOR -->
-				<value>0</value> <!-- OFF -->
-			</binding>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/lh-vor-adf</property>
@@ -2774,14 +2746,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis/input/vor-adf-2</property>
-				<value>0</value> <!-- OFF -->
-				<value>1</value> <!-- VOR -->
-				<value>2</value> <!-- ADF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis/input/rh-vor-adf</property>
+				<property>instrumentation/efis[0]/input/rh-vor-adf</property>
 				<value>0</value> <!-- OFF -->
 				<value>1</value> <!-- VOR -->
 				<value>-1</value> <!-- ADF -->
@@ -2792,14 +2757,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis/input/vor-adf-2</property>
-				<value>2</value> <!-- ADF -->
-				<value>1</value> <!-- VOR -->
-				<value>0</value> <!-- OFF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis/input/rh-vor-adf</property>
+				<property>instrumentation/efis[0]/input/rh-vor-adf</property>
 				<value>-1</value> <!-- ADF -->
 				<value>1</value> <!-- VOR -->
 				<value>0</value> <!-- OFF -->
@@ -2809,7 +2767,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>vor-adf-2</object-name>
-		<property>instrumentation/efis/input/rh-vor-adf</property>
+		<property>instrumentation/efis[0]/input/rh-vor-adf</property>
 		<interpolation>
 			<entry><ind>-1</ind><dep>-25</dep></entry>
 			<entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2828,13 +2786,6 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>instrumentation/efis[1]/input/vor-adf-2</property>
-				<value>0</value> <!-- OFF -->
-				<value>1</value> <!-- VOR -->
-				<value>2</value> <!-- ADF -->
-			</binding>
-			<binding>
-				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/rh-vor-adf</property>
 				<value>0</value> <!-- OFF -->
 				<value>1</value> <!-- VOR -->
@@ -2844,13 +2795,6 @@
 		<action>
 			<button>1</button>
 			<repeatable type="bool">false</repeatable>
-			<binding>
-				<command>property-cycle</command>
-				<property>instrumentation/efis[1]/input/vor-adf-2</property>
-				<value>2</value> <!-- ADF -->
-				<value>1</value> <!-- VOR -->
-				<value>0</value> <!-- OFF -->
-			</binding>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/rh-vor-adf</property>
