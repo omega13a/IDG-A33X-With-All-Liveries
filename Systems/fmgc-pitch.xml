@@ -27,22 +27,14 @@
 		</input>
 		<reference>
 			<condition>
-				<not-equals>
+				<equals>
 					<property>/it-autoflight/output/vert</property>
 					<value>8</value>
-				</not-equals>
+				</equals>
 			</condition>
-			<property>/it-autoflight/internal/alt</property>
-		</reference>
-		<reference>
-			<condition>
-					<equals>
-						<property>/it-autoflight/output/vert</property>
-						<value>8</value>
-					</equals>
-				</condition>
 			<property>/it-autoflight/internal/mng-alt</property>
 		</reference>
+		<reference>/it-autoflight/internal/alt</reference>
 		<output>/it-autoflight/internal/target-fpm</output>
 		<min>/it-autoflight/internal/min-vs</min>
 		<max>/it-autoflight/internal/max-vs</max>
