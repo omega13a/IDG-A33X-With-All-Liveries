@@ -124,7 +124,7 @@
 		</input>
 		<output>/FMGC/internal/mng-alt-spd</output>
 		<min>250</min>
-		<max>345</max>
+		<max>325</max>
 	</filter>
 	
 	<filter>
@@ -149,7 +149,7 @@
 		</input>
 		<output>/FMGC/internal/mng-alt-mach</output>
 		<min>0.500</min>
-		<max>0.815</max>
+		<max>0.855</max>
 	</filter>
 	
 	<filter>
