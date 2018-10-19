@@ -294,7 +294,16 @@
 				</equals>
 			</condition>
 		</enable>
-		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+        <input>
+			<expression>
+				<floor>
+					<sum>
+						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+						<value>0.5</value>
+					</sum>
+				</floor>
+			</expression>
+		</input>
 		<output>/it-autoflight/input/spd-kts</output>
 	</filter>
 	
@@ -310,7 +319,22 @@
 				</equals>
 			</condition>
 		</enable>
-		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
+        <input>
+			<expression>
+				<div>
+					<floor>
+						<sum>
+							<product>
+								<property>/instrumentation/airspeed-indicator/indicated-mach</property>
+								<value>1000</value>
+							</product>
+							<value>0.5</value>
+						</sum>
+					</floor>
+					<value>1000</value>
+				</div>
+			</expression>
+		</input>
 		<output>/it-autoflight/input/spd-mach</output>
 	</filter>
 	
