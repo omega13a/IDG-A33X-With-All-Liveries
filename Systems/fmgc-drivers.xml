@@ -441,21 +441,7 @@
 				</sum>
 			</expression>
 		</input>
-		<input>
-			<condition>
-				<and>
-					<not-equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>0</value>
-					</not-equals>
-					<not-equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>1</value>
-					</not-equals>
-				</and>
-			</condition>
-			<value>0</value>
-		</input>
+		<input>0</input>
 		<output>/it-autoflight/internal/heading-error-deg</output>
 		<period>
 			<min>-180</min>
