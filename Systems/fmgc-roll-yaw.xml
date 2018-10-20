@@ -250,21 +250,7 @@
 				</condition>
 				<value>-0.05</value>
 			</Kp>
-			<Kp>
-				<condition>
-					<or>
-						<equals>
-							<property>/gear/gear[1]/wow</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>/gear/gear[2]/wow</property>
-							<value>1</value>
-						</equals>
-					</or>
-				</condition>
-				<value>-0.02</value>
-			</Kp>
+			<Kp>-0.02</Kp>
 			<Ki>0</Ki>
 		</config>
 		<min>-0.15</min>
@@ -279,10 +265,22 @@
 		<initialize-to>output</initialize-to>
 		<input>
 			<condition>
-				<equals>
-					<property>/it-autoflight/output/lat</property>
-					<value>4</value>
-				</equals>
+				<and>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>4</value>
+					</equals>
+				</and>
 			</condition>
 			<property>/it-autoflight/internal/rudder-cmd</property>
 		</input>
