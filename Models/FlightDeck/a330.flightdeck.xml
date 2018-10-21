@@ -124,7 +124,7 @@
 			<pitch-deg>9.4</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<!-- Radio -->
 	<model>
 		<path>Aircraft/IDG-A33X/Models/Instruments/Radio/Radio1.xml</path>
