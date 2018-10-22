@@ -202,7 +202,7 @@
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<value>0.0165</value>
+				<value>0.0145</value>
 			</product>
 		</function>
 		
