@@ -140,7 +140,7 @@ var canvas_upperECAM_base = {
 		}
 		
 		cur_eng_option = eng_option.getValue();
-		if (acess.getValue() >= 110 and du3_lgt.getValue() > 0) {
+		if (acess.getValue() >= 110 and du3_lgt.getValue() > 0.01) {
 			if (du3_test_time.getValue() + du3_test_amount.getValue() >= elapsedtime) {
 				upperECAM_ge.page.hide();
 				upperECAM_pwrr.page.hide();
