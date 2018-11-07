@@ -3533,7 +3533,7 @@
 				<property>it-autoflight/input/spd-kts</property>
 				<step>1</step>
 				<min>100</min>
-				<max>350</max>
+				<max>330</max>
 			</binding>
 			<binding>
 				<condition>
@@ -3583,7 +3583,7 @@
 				<property>it-autoflight/input/spd-kts</property>
 				<step>-1</step>
 				<min>100</min>
-				<max>350</max>
+				<max>330</max>
 			</binding>
 			<binding>
 				<condition>
