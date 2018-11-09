@@ -660,7 +660,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-rad</property>
-				<value>0.1292</value>
+				<value>0.1392</value>
 			</product>
 		</function>
 		
