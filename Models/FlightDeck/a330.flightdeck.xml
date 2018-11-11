@@ -413,21 +413,13 @@
 	<animation>
 		<type>select</type>
 		<object-name>alt-text-test</object-name>
-		<object-name>audio_att_led</object-name>
 		<object-name>audio_att_sgn</object-name>
 		<object-name>audio_call_hf2_led</object-name>
 		<object-name>audio_call_hf1_led</object-name>
 		<object-name>audio_call_vhf1_led</object-name>
 		<object-name>audio_call_vhf2_led</object-name>
 		<object-name>audio_call_vhf3_led</object-name>
-		<object-name>audio_hf1_led</object-name>
-		<object-name>audio_hf2_led</object-name>
-		<object-name>audio_mech_led</object-name>
 		<object-name>audio_mech_sgn</object-name>
-		<object-name>audio_voice_led</object-name>
-		<object-name>audio_vhf1_led</object-name>
-		<object-name>audio_vhf2_led</object-name>
-		<object-name>audio_vhf3_led</object-name>
 		<object-name>autoland_light_on</object-name>
 		<object-name>ecam_apu_led</object-name>
 		<object-name>ecam_bleed_led</object-name>
