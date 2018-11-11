@@ -88,7 +88,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("radnav");</script>
+				<script>mcdu.pagebutton("radnav", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -113,7 +113,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("init");</script>
+				<script>mcdu.pagebutton("init", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -138,7 +138,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("data");</script>
+				<script>mcdu.pagebutton("data", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -163,7 +163,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("mcdu");</script>
+				<script>mcdu.pagebutton("mcdu", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -188,7 +188,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("perf");</script>
+				<script>mcdu.pagebutton("perf", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -213,7 +213,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("f-pln");</script>
+				<script>mcdu.pagebutton("f-pln", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -238,7 +238,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.pagebutton("fuel-pred");</script>
+				<script>mcdu.pagebutton("fuel-pred", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -263,7 +263,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("1");</script>
+				<script>mcdu.lskbutton("1", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -283,7 +283,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("1");</script>
+				<script>mcdu.lskbutton_b("1", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -307,7 +307,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("2");</script>
+				<script>mcdu.lskbutton("2", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -327,7 +327,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("2");</script>
+				<script>mcdu.lskbutton_b("2", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -351,7 +351,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("3");</script>
+				<script>mcdu.lskbutton("3", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -371,7 +371,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("3");</script>
+				<script>mcdu.lskbutton_b("3", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -395,7 +395,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("4");</script>
+				<script>mcdu.lskbutton("4", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -415,7 +415,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("4");</script>
+				<script>mcdu.lskbutton_b("4", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -439,7 +439,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("5");</script>
+				<script>mcdu.lskbutton("5", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -459,7 +459,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("5");</script>
+				<script>mcdu.lskbutton_b("5", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -483,7 +483,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton("6");</script>
+				<script>mcdu.lskbutton("6", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -503,7 +503,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.lskbutton_b("6");</script>
+				<script>mcdu.lskbutton_b("6", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -528,7 +528,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("1");</script>
+				<script>mcdu.rskbutton("1", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -548,7 +548,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("1");</script>
+				<script>mcdu.rskbutton_b("1", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -572,7 +572,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("2");</script>
+				<script>mcdu.rskbutton("2", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -592,7 +592,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("2");</script>
+				<script>mcdu.rskbutton_b("2", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -616,7 +616,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("3");</script>
+				<script>mcdu.rskbutton("3", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -636,7 +636,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("3");</script>
+				<script>mcdu.rskbutton_b("3", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -660,7 +660,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("4");</script>
+				<script>mcdu.rskbutton("4", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -680,7 +680,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("4");</script>
+				<script>mcdu.rskbutton_b("4", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -704,7 +704,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("5");</script>
+				<script>mcdu.rskbutton("5", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -724,7 +724,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("5");</script>
+				<script>mcdu.rskbutton_b("5", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -748,7 +748,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton("6");</script>
+				<script>mcdu.rskbutton("6", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -768,7 +768,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.rskbutton_b("6");</script>
+				<script>mcdu.rskbutton_b("6", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -793,7 +793,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.arrowbutton("left");</script>
+				<script>mcdu.arrowbutton("left", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -817,7 +817,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.arrowbutton("right");</script>
+				<script>mcdu.arrowbutton("right", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -841,7 +841,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.arrowbutton("up");</script>
+				<script>mcdu.arrowbutton("up", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -865,7 +865,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.arrowbutton("down");</script>
+				<script>mcdu.arrowbutton("down", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -890,7 +890,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("A");</script>
+				<script>mcdu.button("A", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -914,7 +914,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("B");</script>
+				<script>mcdu.button("B", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -938,7 +938,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("C");</script>
+				<script>mcdu.button("C", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -962,7 +962,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("D");</script>
+				<script>mcdu.button("D", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -986,7 +986,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("E");</script>
+				<script>mcdu.button("E", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1010,7 +1010,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("F");</script>
+				<script>mcdu.button("F", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1034,7 +1034,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("G");</script>
+				<script>mcdu.button("G", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1058,7 +1058,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("H");</script>
+				<script>mcdu.button("H", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1082,7 +1082,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("I");</script>
+				<script>mcdu.button("I", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1106,7 +1106,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("J");</script>
+				<script>mcdu.button("J", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1130,7 +1130,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("K");</script>
+				<script>mcdu.button("K", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1154,7 +1154,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("L");</script>
+				<script>mcdu.button("L", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1178,7 +1178,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("M");</script>
+				<script>mcdu.button("M", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1202,7 +1202,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("N");</script>
+				<script>mcdu.button("N", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1226,7 +1226,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("O");</script>
+				<script>mcdu.button("O", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1250,7 +1250,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("P");</script>
+				<script>mcdu.button("P", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1274,7 +1274,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("Q");</script>
+				<script>mcdu.button("Q", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1298,7 +1298,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("R");</script>
+				<script>mcdu.button("R", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1322,7 +1322,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("S");</script>
+				<script>mcdu.button("S", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1346,7 +1346,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("T");</script>
+				<script>mcdu.button("T", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1370,7 +1370,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("U");</script>
+				<script>mcdu.button("U", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1394,7 +1394,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("V");</script>
+				<script>mcdu.button("V", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1418,7 +1418,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("W");</script>
+				<script>mcdu.button("W", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1442,7 +1442,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("X");</script>
+				<script>mcdu.button("X", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1466,7 +1466,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("Y");</script>
+				<script>mcdu.button("Y", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1490,7 +1490,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("Z");</script>
+				<script>mcdu.button("Z", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1514,7 +1514,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("SLASH");</script>
+				<script>mcdu.button("SLASH", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1538,7 +1538,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("SP");</script>
+				<script>mcdu.button("SP", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1562,7 +1562,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("OVFY");</script>
+				<script>mcdu.button("OVFY", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1586,7 +1586,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("CLR");</script>
+				<script>mcdu.button("CLR", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1610,7 +1610,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("0");</script>
+				<script>mcdu.button("0", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1634,7 +1634,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("1");</script>
+				<script>mcdu.button("1", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1658,7 +1658,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("2");</script>
+				<script>mcdu.button("2", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1682,7 +1682,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("3");</script>
+				<script>mcdu.button("3", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1706,7 +1706,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("4");</script>
+				<script>mcdu.button("4", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1730,7 +1730,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("5");</script>
+				<script>mcdu.button("5", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1754,7 +1754,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("6");</script>
+				<script>mcdu.button("6", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1778,7 +1778,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("7");</script>
+				<script>mcdu.button("7", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1802,7 +1802,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("8");</script>
+				<script>mcdu.button("8", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1826,7 +1826,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("9");</script>
+				<script>mcdu.button("9", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1850,7 +1850,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("DOT");</script>
+				<script>mcdu.button("DOT", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
@@ -1874,7 +1874,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>mcdu1.button("PLUSMINUS");</script>
+				<script>mcdu.button("PLUSMINUS", 0);</script>
 				<condition>
 					<and>
 						<greater-than-equals>
