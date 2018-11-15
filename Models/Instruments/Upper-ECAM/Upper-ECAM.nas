@@ -10,6 +10,7 @@ var upperECAM_pwrr = nil;
 var upperECAM_test = nil;
 var upperECAM_display = nil;
 var elapsedtime = 0;
+var leftmsg = "XX";
 
 # Create Nodes:
 var fuel_1 = props.globals.initNode("/engines/engine[0]/fuel-flow_actual", 0);
