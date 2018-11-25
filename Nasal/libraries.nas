@@ -180,8 +180,8 @@ var systemsInit = func {
 	fadec.FADEC.init();
   	fmgc.APinit();			
 	fmgc.FMGCinit();
-	mcdu1.MCDU_init();
-	mcdu2.MCDU_init();
+	mcdu.MCDU_init(0);
+	mcdu.MCDU_init(1);
 	systemsLoop.start();
 	icing.icingInit();
 	lightsLoop.start();
@@ -192,6 +192,7 @@ var systemsInit = func {
 	libraries.BUTTONS.init();
 	libraries.variousReset();
 	rmp.init();
+	acp.init();
 }
 
 setlistener("/sim/signals/fdm-initialized", func {

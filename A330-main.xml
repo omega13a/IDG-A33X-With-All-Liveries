@@ -605,6 +605,8 @@
 				<du4 type="double">1</du4>
 				<du5 type="double">1</du5>
 				<du6 type="double">1</du6>
+				<mcdu1 type="double">1</mcdu1>
+				<mcdu2 type="double">1</mcdu2>
 			</DU>
 			<beacon type="bool">0</beacon>
 			<interior type="double">0</interior>
@@ -1493,32 +1495,19 @@
 			<file>Aircraft/IDG-A33X/Nasal/FMGC-b.nas</file>
 			<file>Aircraft/IDG-A33X/Nasal/FMGC-c.nas</file>
 		</fmgc>
-		<mcdu1>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/MCDU.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/F-PLNA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/INITA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/INITB.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/PERFCLB.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/PERFCRZ.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/PERFDES.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/PERFTO.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/RADNAV.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/DATA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU1/STATUS.nas</file>
-		</mcdu1>
-		<mcdu2>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/MCDU.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/F-PLNA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/INITA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/INITB.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/PERFCLB.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/PERFCRZ.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/PERFDES.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/PERFTO.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/RADNAV.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/DATA.nas</file>
-			<file>Aircraft/IDG-A33X/Nasal/MCDU2/STATUS.nas</file>
-		</mcdu2>
+		<mcdu>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/MCDU.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/F-PLNA.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/INITA.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/INITB.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/PERFCLB.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/PERFCRZ.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/PERFDES.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/PERFTO.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/RADNAV.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/DATA.nas</file>
+			<file>Aircraft/IDG-A33X/Nasal/MCDU/STATUS.nas</file>
+		</mcdu>
 		<canvas_pfd>
 			<file>Aircraft/IDG-A33X/Models/Instruments/PFD/PFD.nas</file>
 		</canvas_pfd>
@@ -1553,6 +1542,9 @@
 		<rmp>
 			<file>Aircraft/IDG-A33X/Nasal/rmp.nas</file>
 		</rmp>
+		<acp>
+			<file>Aircraft/IDG-A33X/Nasal/acp.nas</file>
+		</acp>
 	</nasal>
 
 </PropertyList>

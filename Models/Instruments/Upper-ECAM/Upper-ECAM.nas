@@ -10,6 +10,7 @@ var upperECAM_pwrr = nil;
 var upperECAM_test = nil;
 var upperECAM_display = nil;
 var elapsedtime = 0;
+var leftmsg = "XX";
 
 # Create Nodes:
 var fuel_1 = props.globals.initNode("/engines/engine[0]/fuel-flow_actual", 0);
@@ -140,7 +141,7 @@ var canvas_upperECAM_base = {
 		}
 		
 		cur_eng_option = eng_option.getValue();
-		if (acess.getValue() >= 110 and du3_lgt.getValue() > 0) {
+		if (acess.getValue() >= 110 and du3_lgt.getValue() > 0.01) {
 			if (du3_test_time.getValue() + du3_test_amount.getValue() >= elapsedtime) {
 				upperECAM_ge.page.hide();
 				upperECAM_pwrr.page.hide();

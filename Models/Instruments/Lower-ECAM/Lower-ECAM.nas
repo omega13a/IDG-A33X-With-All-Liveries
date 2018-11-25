@@ -84,7 +84,7 @@ var canvas_lowerECAM_base = {
 			setprop("/instrumentation/du/du4-test", 0);
 		}
 		
-		if (getprop("/systems/electrical/bus/ac2") >= 110 and getprop("/controls/lighting/DU/du4") > 0) {
+		if (getprop("/systems/electrical/bus/ac2") >= 110 and getprop("/controls/lighting/DU/du4") > 0.01) {
 			if (getprop("/instrumentation/du/du4-test-time") + getprop("/instrumentation/du/du4-test-amount") >= elapsedtime) {
 				lowerECAM_apu.page.hide();
 				lowerECAM_eng.page.hide();
