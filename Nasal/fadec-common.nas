@@ -119,7 +119,7 @@ setlistener("/controls/engines/engine[0]/throttle-pos", func {
 		}
 		setprop("/controls/engines/engine[0]/throttle-fdm", 0.99);
 	}
-});
+}, 0, 0);
 
 setlistener("/controls/engines/engine[1]/throttle-pos", func {
 	engstate1 = getprop("/engines/engine[0]/state");
@@ -180,7 +180,7 @@ setlistener("/controls/engines/engine[1]/throttle-pos", func {
 		}
 		setprop("/controls/engines/engine[1]/throttle-fdm", 0.99);
 	}
-});
+}, 0, 0);
 
 # Alpha Floor and Toga Lock
 setlistener("/it-autoflight/input/athr", func {
