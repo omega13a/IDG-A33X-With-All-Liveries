@@ -185,7 +185,6 @@ var systemsInit = func {
 	systemsLoop.start();
 	icing.icingInit();
 	lightsLoop.start();
-	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/IDG-A33X/Systems/autopilot-dlg.xml");
 	setprop("/it-autoflight/input/fd1", 1);
 	setprop("/it-autoflight/input/fd2", 1);
 	libraries.ECAM.init();

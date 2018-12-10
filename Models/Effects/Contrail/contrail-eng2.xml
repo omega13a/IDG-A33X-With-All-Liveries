@@ -3,7 +3,7 @@
 <PropertyList>
 	
 	<particlesystem>
-		<name>contrail-eng2</name>
+		<name>contrail-eng1</name>
 		<texture>contrail.rgb</texture>
 		<emissive type="bool">false</emissive>
 		<lighting type="bool">false</lighting>
@@ -22,7 +22,7 @@
 					<value>-30</value>
 				</less-than>
 				<equals>
-					<property>engines/engine[1]/state</property>
+					<property>engines/engine[0]/state</property>
 					<value>3</value>
 				</equals>
 			</and>
@@ -63,84 +63,84 @@
 		<align>billboard</align>
 		
 		<particle>
-     <start>
-		<color>
-			<red>
-				<expression>
-					<product>
-						<value>0.7</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</red>
-			<green>
-				<expression>
-					<product>
-						<value>0.7</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</green>
-			<blue>
-				<expression>
-					<product>
-						<value>0.7</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</blue>
-			<alpha>
-				<value>0.3</value>
-			</alpha>
-		</color>
-       <size>
-         <value>2</value>
-       </size>
-     </start>
+			<start>
+				<color>
+					<red>
+						<expression>
+							<product>
+								<value>0.7</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</red>
+					<green>
+						<expression>
+							<product>
+								<value>0.7</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</green>
+					<blue>
+						<expression>
+							<product>
+								<value>0.7</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</blue>
+					<alpha>
+						<value>0.3</value>
+					</alpha>
+				</color>
+				<size>
+					<value>2</value>
+				</size>
+			</start>
 
-     <end>
-		<color>
-			<red>
-				<expression>
-					<product>
-						<value>1.0</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</red>
-			<green>
-				<expression>
-					<product>
-						<value>1.0</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</green>
-			<blue>
-				<expression>
-					<product>
-						<value>1.0</value>
-						<property>rendering/scene/diffuse/red</property>
-					</product>
-				</expression>
-			</blue>
-			<alpha>
-				<value>0.00000001</value>
-			</alpha>
-		</color>
-		<size>
-			<value>6</value>
-		</size>
-	</end>
+			<end>
+				<color>
+					<red>
+						<expression>
+							<product>
+								<value>1.0</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</red>
+					<green>
+						<expression>
+							<product>
+								<value>1.0</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</green>
+					<blue>
+						<expression>
+							<product>
+								<value>1.0</value>
+								<property>rendering/scene/diffuse/red</property>
+							</product>
+						</expression>
+					</blue>
+					<alpha>
+						<value>0.00000001</value>
+					</alpha>
+				</color>
+				<size>
+					<value>6</value>
+				</size>
+			</end>
 
-     <life-sec>
-       <value>10</value>
-     </life-sec>
-        
-     <mass-kg>  0.5 </mass-kg>
-     <radius-m> 0.5 </radius-m>
-   </particle>
-		
+			<life-sec>
+				<value>10</value>
+			</life-sec>
+
+			<mass-kg>0.5</mass-kg>
+			<radius-m>0.5</radius-m>
+		</particle>
+
 		<program>
 			<fluid>air</fluid>
 			<gravity type="bool">true</gravity>
