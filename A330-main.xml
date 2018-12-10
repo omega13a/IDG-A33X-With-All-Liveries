@@ -627,6 +627,8 @@
 			<overhead-panel-norm type="double">0</overhead-panel-norm>
 			<main-panel-pedestal-norm type="double">0</main-panel-pedestal-norm>
 			<strobe type="bool">0</strobe>
+			<no-smoking-sign type="bool">1</no-smoking-sign>
+			<seatbelt-sign type="bool">0</seatbelt-sign>
 			<taxi-light-switch type="float">0</taxi-light-switch>
 		</lighting>
 		<OH>
@@ -667,10 +669,11 @@
 			<battery-sel type="int">0</battery-sel>
 			<cart type="bool">0</cart>
 			<!-- Smoking is bad :P -->
-			<no-smoking-sign type="bool">1</no-smoking-sign>
-			<seatbelt-sign type="bool">0</seatbelt-sign>
+			<no-smoking-sign type="double">0.5</no-smoking-sign>
+			<seatbelt-sign type="double">0.5</seatbelt-sign>
 			<annun-test>0</annun-test>
 			<windowprobeheat type="double">0.5</windowprobeheat>
+			<strobe type="double">0.0</strobe>
 		</switches>
 		<tray n="0">
 			<lefttrayext type="double">0</lefttrayext>
