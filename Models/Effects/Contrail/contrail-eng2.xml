@@ -22,7 +22,7 @@
 					<value>-30</value>
 				</less-than>
 				<equals>
-					<property>engines/engine[0]/state</property>
+					<property>engines/engine[1]/state</property>
 					<value>3</value>
 				</equals>
 			</and>
