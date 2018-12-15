@@ -21,7 +21,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 19978.5 </damping_coeff>
 		<max_steer unit="DEG"> 70 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>1</retractable>
+		<retractable> 1 </retractable>
 	</contact>
 	<contact type="BOGEY" name="LEFT_MLG">
 		<location unit="M">
@@ -36,7 +36,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 26957 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> LEFT </brake_group>
-		<retractable>1</retractable>
+		<retractable> 1 </retractable>
 	</contact>
 	<contact type="BOGEY" name="RIGHT_MLG">
 		<location unit="M">
@@ -51,7 +51,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 26957 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> RIGHT </brake_group>
-		<retractable>1</retractable>
+		<retractable> 1 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="NOSE_1">
@@ -67,7 +67,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="NOSE_2">
 		<location unit="M">
@@ -82,7 +82,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="BOTTOM_1">
@@ -98,7 +98,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="BOTTOM_2">
 		<location unit="M">
@@ -113,7 +113,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="TOP_1">
@@ -129,7 +129,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="TOP_2">
 		<location unit="M">
@@ -144,7 +144,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="ENG_1">
@@ -160,7 +160,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="ENG_2">
 		<location unit="M">
@@ -175,7 +175,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="TAIL_1">
@@ -191,7 +191,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="TAIL_2">
 		<location unit="M">
@@ -206,7 +206,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	
 	<contact type="STRUCTURE" name="WING_TIP_1">
@@ -222,7 +222,7 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 	<contact type="STRUCTURE" name="WING_TIP_2">
 		<location unit="M">
@@ -237,6 +237,6 @@
 		<damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
 		<max_steer unit="DEG"> 0.0 </max_steer>
 		<brake_group> NONE </brake_group>
-		<retractable>0</retractable>
+		<retractable> 0 </retractable>
 	</contact>
 </ground_reactions>
