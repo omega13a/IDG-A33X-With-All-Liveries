@@ -33,7 +33,7 @@
 	
 	<!-- Contrails -->
 	<model>
-		<path>Aircraft/IDG-A33X/Models/Effects/Contrail/contrail-eng1.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Effects/contrail-eng1.xml</path>
 		<offsets>
 			<x-m>44</x-m>
 			<y-m>-9.4014</y-m>
@@ -41,7 +41,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/IDG-A33X/Models/Effects/Contrail/contrail-eng2.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Effects/contrail-eng2.xml</path>
 		<offsets>
 			<x-m>44</x-m>
 			<y-m>9.4014</y-m>
