@@ -12,7 +12,7 @@
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/pitch/g-pi</property>
 	<property value="0">fbw/pitch/pid</property>
-	<property value="0">fbw/yaw/tc-pid</property>
+	<property value="0">fbw/yaw/tc-pd</property>
 	
 	<!-- Default gains for tuning -->
 	<property value="0">fbw/roll/p-gain</property>
@@ -1217,7 +1217,7 @@
 			</test>
 		</switch>
 		
-		<pid name="fbw/yaw/tc-pid-v">
+		<pid name="fbw/yaw/tc-pd-v">
 			<input>fbw/yaw/slip-skid</input>
 			<kp>fbw/yaw/tc-p-gain</kp>
 			<ki>0.0</ki>
@@ -1226,11 +1226,11 @@
 				<min>-0.4</min>
 				<max>0.4</max>
 			</clipto>
-			<output>fbw/yaw/tc-pid</output>
+			<output>fbw/yaw/tc-pd</output>
 		</pid>
 		
-		<switch name="fbw/yaw/tc-pid-s">
-			<default value="fbw/yaw/tc-pid"/>
+		<switch name="fbw/yaw/tc-pd-s">
+			<default value="fbw/yaw/tc-pd"/>
 			<test logic="OR" value="0">
 				position/wow eq 1
 				fbw/yaw/rudder-nul gt 0
@@ -1247,7 +1247,7 @@
 		
 		<summer name="fbw/yaw/output-sum">
 			<input>fbw/yaw/yd-f</input>
-			<input>fbw/yaw/tc-pid-s</input>
+			<input>fbw/yaw/tc-pd-s</input>
 			<input>fbw/yaw/fmgc-cmd</input>
 		</summer>
 		
