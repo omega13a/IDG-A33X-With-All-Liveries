@@ -500,14 +500,10 @@
 			</test>
 		</switch>
 		
-		<fcs_function name="fbw/roll/rate-error">
-			<function>
-				<difference>
-					<property>fbw/roll/p-r_s-s</property>
-					<property>fbw/roll/rate-demand-lag</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/roll/rate-error">
+			<input>fbw/roll/p-r_s-s</input>
+			<input>-fbw/roll/rate-demand-lag</input>
+		</summer>
 		
 		<switch name="fbw/roll/trigger">
 			<default value="0"/>
@@ -839,14 +835,10 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fbw/pitch/g-error">
-			<function>
-				<difference>
-					<property>fbw/pitch/g-computed</property>
-					<property>fbw/pitch/g-demand</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/pitch/g-error">
+			<input>fbw/pitch/g-computed</input>
+			<input>-fbw/pitch/g-demand</input>
+		</summer>
 		
 		<!-- Goes to Systems/fbw-pitch.xml then back as fbw/pitch/g-pi -->
 		
@@ -987,14 +979,10 @@
 			</test>
 		</switch>
 		
-		<fcs_function name="fbw/pitch/rate-error">
-			<function>
-				<difference>
-					<property>fbw/pitch/t-r_s-s</property>
-					<property>fbw/pitch/rate-demand-lag</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/pitch/rate-error">
+			<input>fbw/pitch/t-r_s-s</input>
+			<input>-fbw/pitch/rate-demand-lag</input>
+		</summer>
 		
 		<switch name="fbw/pitch/trigger">
 			<default value="0"/>
