@@ -2,9 +2,7 @@
 # For Boom, and Drogues
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2018 Joshua Davidson (it0uchpods)
 
 var refeulInit = func {
 	setprop("/options/boom-pos-norm", 0);

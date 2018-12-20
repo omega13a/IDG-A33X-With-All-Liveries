@@ -1,9 +1,7 @@
 # A3XX Fuel System
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2018 Joshua Davidson (it0uchpods)
 
 var xfeed_sw = 0;
 var tank0pump1_sw = 0;

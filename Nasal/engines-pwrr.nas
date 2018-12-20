@@ -1,9 +1,7 @@
 # A3XX PW4000/RR Trent 700 Engine
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2018 Joshua Davidson (it0uchpods)
 
 #####################
 # Initializing Vars #

@@ -1,9 +1,6 @@
 # A3XX MCDU
-# Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2018 Joshua Davidson (it0uchpods)
 
 var MCDU_1 = nil;
 var MCDU_2 = nil;
