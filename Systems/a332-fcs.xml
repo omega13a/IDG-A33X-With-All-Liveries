@@ -563,46 +563,6 @@
 			</test>
 		</switch>
 		
-		<fcs_function name="fbw/aileron-output-inner-l">
-			<function>
-				<ifthen>
-					<eq>
-						<property>fbw/internal-fbw-law</property>
-						<value>0</value>
-					</eq>
-					<table>
-						<independentVar lookup="row">fbw/aileron-output</independentVar>
-						<tableData>
-							-1.0 -0.5
-							 0.0  0.0
-							 1.0  1.0
-						</tableData>
-					</table>
-					<property>fbw/aileron-output</property>
-				</ifthen>
-			</function>
-		</fcs_function>
-		
-		<fcs_function name="fbw/aileron-output-inner-r">
-			<function>
-				<ifthen>
-					<eq>
-						<property>fbw/internal-fbw-law</property>
-						<value>0</value>
-					</eq>
-					<table>
-						<independentVar lookup="row">fbw/aileron-output</independentVar>
-						<tableData>
-							-1.0 -1.0
-							 0.0  0.0
-							 1.0  0.5
-						</tableData>
-					</table>
-					<property>fbw/aileron-output</property>
-				</ifthen>
-			</function>
-		</fcs_function>
-		
 		<fcs_function name="fbw/roll/s-i-f">
 			<function>
 				<product>
@@ -1347,7 +1307,7 @@
 		<fcs_function name="hydraulics/aileron-in-l/function">
 			<function>
 				<sum>
-					<property>fbw/aileron-output-inner-l</property>
+					<property>fbw/aileron-output</property>
 					<table>
 						<independentVar lookup="row">/fdm/jsbsim/fcs/flap-pos-deg</independentVar>
 						<tableData>
@@ -1403,7 +1363,7 @@
 			<function>
 				<sum>
 					<product>
-						<property>fbw/aileron-output-inner-r</property>
+						<property>fbw/aileron-output</property>
 						<value>-1.0</value>
 					</product>
 					<table>
