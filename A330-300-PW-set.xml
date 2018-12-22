@@ -150,6 +150,9 @@
             <autopilot n="0">
                 <path>Aircraft/IDG-A33X/Systems/fadec-pw.xml</path>
             </autopilot>
+			<autopilot n="10">
+				<path>Aircraft/IDG-A33X/Systems/pw4000-sound.xml</path>
+			</autopilot>
 		</systems>
 		
 	</sim>

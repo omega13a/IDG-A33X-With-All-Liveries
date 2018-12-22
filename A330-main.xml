@@ -153,11 +153,9 @@
 				<path>Aircraft/IDG-A33X/Systems/lower-ecam.xml</path>
 			</autopilot>
 			<autopilot n="9">
-				<path>Aircraft/IDG-A33X/Systems/fl2070_sound.xml</path>
-			</autopilot>
-			<autopilot n="10">
 				<path>Aircraft/IDG-A33X/Systems/pfd.xml</path>
 			</autopilot>
+			<!-- 10 is sound -->
 		</systems>
 
 		<sounde>

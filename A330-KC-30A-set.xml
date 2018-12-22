@@ -175,6 +175,9 @@
             <autopilot n="0">
                 <path>Aircraft/IDG-A33X/Systems/fadec-ge.xml</path>
             </autopilot>
+			<autopilot n="10">
+				<path>Aircraft/IDG-A33X/Systems/cf6-sound.xml</path>
+			</autopilot>
 		</systems>
 		
 	</sim>
