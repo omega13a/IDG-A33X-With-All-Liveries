@@ -387,9 +387,9 @@
 			<expression>
 				<table>
 					<property>/engines/engine[0]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>-0.15</dep></entry>
-					<entry><ind>  22.7</ind><dep> 0.03</dep></entry>
-					<entry><ind>5280.0</ind><dep> 1.00</dep></entry>
+					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>  22.7</ind><dep>0.03</dep></entry>
+					<entry><ind>5280.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -476,9 +476,9 @@
 			<expression>
 				<table>
 					<property>/engines/engine[1]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>-0.15</dep></entry>
-					<entry><ind>  22.7</ind><dep> 0.03</dep></entry>
-					<entry><ind>5280.0</ind><dep> 1.00</dep></entry>
+					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>  22.7</ind><dep>0.03</dep></entry>
+					<entry><ind>5280.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
