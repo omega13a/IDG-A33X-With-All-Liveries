@@ -42,7 +42,7 @@ var _loop = func() {
 		var time = getprop("/sim/time/elapsed-sec");
 		var prop = math.min(math.max(_K_p * deltaV, -_F_p), _F_p);
 		var speedup = getprop("/sim/speed-up");
-		var deriv = 0;
+		var deriv = 0.0;
 		dt = time - _time;
 		# XXX Sanitising dt. Smaller chance of freakout on lag spike.
 		if(dt > 0.0) {
@@ -50,7 +50,7 @@ var _loop = func() {
 				_int = math.min(math.max(_int + _K_i * dV * dt, -_F_i), _F_i);
 			}
 			if(dt > 0.002) {
-				var deriv = math.min(math.max(_K_d * dV / dt, -_F_d), _F_d);
+				deriv = math.min(math.max(_K_d * dV / dt, -_F_d), _F_d);
 			}
 		}
 		var accel = prop + _int + deriv;
