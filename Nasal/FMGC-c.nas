@@ -203,7 +203,7 @@ var loopFMA = maketimer(0.05, func {
 	}
 	
 	# Preselect HDG
-	if (getprop("/modes/fcu/hdg-time") + 10 >= elapsedtime) {
+	if (getprop("/modes/fcu/hdg-time") + 45 >= elapsedtime) {
 		setprop("/it-autoflight/custom/show-hdg", 1);
 	} else if (getprop("/it-autoflight/output/lat") != 0 and getprop("/it-autoflight/output/lat") != 5  and getprop("/it-autoflight/output/lat") != 9) {
 		setprop("/it-autoflight/custom/show-hdg", 0);
