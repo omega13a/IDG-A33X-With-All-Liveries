@@ -1,7 +1,7 @@
 # A3XX Engine Control
 # Joshua Davidson (it0uchpods)
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 if (getprop("/options/eng") == "PW" or getprop("/options/eng") == "RR") {
 	io.include("engines-pwrr.nas");

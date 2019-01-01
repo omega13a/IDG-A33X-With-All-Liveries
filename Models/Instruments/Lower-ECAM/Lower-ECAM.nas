@@ -1,6 +1,6 @@
 # A3XX Lower ECAM Canvas
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var lowerECAM_apu = nil;
 var lowerECAM_eng = nil;

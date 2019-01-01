@@ -1,7 +1,7 @@
 # A3XX Icing System
 # Jonathan Redpath (legoboyvdlp)
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var dewpoint = 0;
 var temperature = 0;

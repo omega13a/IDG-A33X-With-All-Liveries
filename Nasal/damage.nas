@@ -2,7 +2,7 @@
 # Author: Nikolai V. Chr. (with some improvement by Onox and Pinto)
 # Modified for IDG by Joshua Davidson (it0uchpods)
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 # Enable the damage checkbox in Aircraft Configuration
 setprop("/systems/acconfig/damage-loaded", 1);

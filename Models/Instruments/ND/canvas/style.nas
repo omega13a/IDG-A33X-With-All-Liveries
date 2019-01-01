@@ -2,7 +2,7 @@
 # Joshua Davidson (it0uchpods)
 # Based on work by artix
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var ALWAYS = func 1;
 var NOTHING = func nil;
