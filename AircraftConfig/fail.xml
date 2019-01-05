@@ -179,9 +179,9 @@
 			</checkbox>
 			
 		</group>
-			
+		
 		<vrule/>
-			
+		
 		<group>
 			<layout>vbox</layout>
 			
@@ -386,7 +386,7 @@
 		</group>
 		
 		<vrule/>
-			
+		
 		<group>
 			<layout>vbox</layout>
 			
