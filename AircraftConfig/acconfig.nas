@@ -235,6 +235,7 @@ var writeSettings = func {
 var colddark = func {
 	if (getprop("/systems/acconfig/mismatch-code") == "0x000") {
 		spinning.start();
+		ps_loaded_dlg.close();
 		ps_load_dlg.open();
 		setprop("/systems/acconfig/autoconfig-running", 1);
 		setprop("/controls/gear/brake-left", 1);
@@ -283,6 +284,7 @@ var colddark_b = func {
 var beforestart = func {
 	if (getprop("/systems/acconfig/mismatch-code") == "0x000") {
 		spinning.start();
+		ps_loaded_dlg.close();
 		ps_load_dlg.open();
 		setprop("/systems/acconfig/autoconfig-running", 1);
 		setprop("/controls/gear/brake-left", 1);
@@ -363,6 +365,7 @@ var beforestart_b = func {
 var taxi = func {
 	if (getprop("/systems/acconfig/mismatch-code") == "0x000") {
 		spinning.start();
+		ps_loaded_dlg.close();
 		ps_load_dlg.open();
 		setprop("/systems/acconfig/autoconfig-running", 1);
 		setprop("/controls/gear/brake-left", 1);
