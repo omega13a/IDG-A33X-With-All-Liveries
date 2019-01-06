@@ -1612,49 +1612,6 @@
 	
 	</channel>
 	
-	<channel name="Pitch Aero">
-		
-		<scheduled_gain name="hydraulics/elevator-l/final-deg-aero">
-			<input>hydraulics/elevator-l/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0      43000
-					0.0  1.000  0.850
-					0.9  0.001  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-r/final-deg-aero">
-			<input>hydraulics/elevator-r/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0      43000
-					0.0  1.000  0.850
-					0.9  0.001  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-trim/final-deg-aero">
-			<input>hydraulics/elevator-trim/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0      43000
-					0.0  1.000  0.850
-					0.9  0.001  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-	
-	</channel>
-	
 	<channel name="Rudder">
 		
 		<fcs_function name="hydraulics/rudder/max-deg-fac">
