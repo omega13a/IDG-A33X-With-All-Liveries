@@ -7,6 +7,19 @@
 # Enable the damage checkbox in Aircraft Configuration
 setprop("/systems/acconfig/damage-loaded", 1);
 
+# No cheating! Force blackout/redout on when damage is being used.
+var enableRedout = func {
+	if (getprop("/options/system/allow-damage") == 1) {
+		setprop("/sim/rendering/redout/enabled", 1);
+	}
+}
+setlistener("/sim/rendering/redout/enabled", func {
+	enableRedout();
+});
+setlistener("/options/system/allow-damage", func {
+	enableRedout();
+});
+
 var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 
 var TRUE  = 1;
