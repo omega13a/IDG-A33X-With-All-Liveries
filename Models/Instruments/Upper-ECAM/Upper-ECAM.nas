@@ -1,9 +1,6 @@
 # A3XX Upper ECAM Canvas
-# Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var upperECAM_ge = nil;
 var upperECAM_pwrr = nil;
@@ -52,8 +49,8 @@ var modeautobrake = props.globals.getNode("/controls/autobrake/mode", 1);
 var speedbrakearm = props.globals.getNode("/controls/flight/speedbrake-arm", 1);
 var ECAMtoconfig = props.globals.getNode("/ECAM/to-config", 1);
 var gear = props.globals.getNode("/gear/gear[1]/position-norm", 1);
-var smoke = props.globals.getNode("/controls/switches/no-smoking-sign", 1);
-var seatbelt = props.globals.getNode("/controls/switches/seatbelt-sign", 1);
+var smoke = props.globals.getNode("/controls/lighting/no-smoking-sign", 1);
+var seatbelt = props.globals.getNode("/controls/lighting/seatbelt-sign", 1);
 var flaps3_ovr = props.globals.getNode("/instrumentation/mk-viii/inputs/discretes/momentary-flap-3-override", 1);
 var wow0 = props.globals.getNode("/gear/gear[0]/wow");
 var eng1_n1 = props.globals.getNode("/engines/engine[0]/n1-actual", 1);

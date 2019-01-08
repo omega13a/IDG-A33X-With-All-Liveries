@@ -1,8 +1,4 @@
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
   <fx>
@@ -835,28 +831,6 @@
 			<volume>
 				<property>sim/sounde/gear-vol</property>
 			</volume>
-		</gear>
-		
-		<gear>
-			<name>gearding</name>
-			<mode>once</mode>
-			<path>nosmoko.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>gear/gear[0]/position-norm</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>gear/gear[1]/position-norm</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>gear/gear[2]/position-norm</property>
-						<value>0</value>
-					</equals>
-				</and>
-			</condition>
 		</gear>
 		
 		<wind>

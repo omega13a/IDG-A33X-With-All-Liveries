@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <PropertyList include="a332-animations.xml">
 	<name>A330-243f</name>
@@ -33,7 +29,7 @@
 	
 	<!-- Contrails -->
 	<model>
-		<path>Aircraft/IDG-A33X/Models/Effects/Contrail/contrail-eng1.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Effects/contrail-eng1.xml</path>
 		<offsets>
 			<x-m>44</x-m>
 			<y-m>-9.4014</y-m>
@@ -41,7 +37,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/IDG-A33X/Models/Effects/Contrail/contrail-eng2.xml</path>
+		<path>Aircraft/IDG-A33X/Models/Effects/contrail-eng2.xml</path>
 		<offsets>
 			<x-m>44</x-m>
 			<y-m>9.4014</y-m>

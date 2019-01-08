@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <!-- A3XX GE CF6 FADEC -->
-<!-- Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
 
@@ -205,7 +200,7 @@
 						<property>/engines/flx-throttle</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -214,7 +209,7 @@
 				<table>
 					<property>/controls/engines/engine[0]/throttle-cmd-man</property>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -246,7 +241,7 @@
 						<property>/engines/flx-throttle</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -255,7 +250,7 @@
 				<table>
 					<property>/controls/engines/engine[1]/throttle-cmd-man</property>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -1059,7 +1054,7 @@
 						<property>/controls/engines/throttle-scale</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -1079,7 +1074,7 @@
 						<property>/controls/engines/throttle-scale</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -1099,7 +1094,7 @@
 						<property>/engines/flx-throttle</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -1119,7 +1114,7 @@
 						<property>/controls/engines/throttle-scale</property>
 					</product>
 					<entry><ind>0.00</ind><dep> 23.7</dep></entry>
-					<entry><ind>1.00</ind><dep>105.6</dep></entry>
+					<entry><ind>1.00</ind><dep>111.2</dep></entry>
 				</table>
 			</expression>
 		</input>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
 
@@ -28,18 +24,19 @@
 
 		<model>
 			<pushback>
+				<connected type="bool">0</connected>
 				<position-norm type="double">0</position-norm>
 				<enabled type="int"/>
 				<available type="int">1</available>
-				<chocks alias="/controls/gear/wheel-chocks"/>
-				<steer-cmd-norm alias="/controls/flight/rudder"/>
-				<yaw alias="/gear/gear[0]/steering-norm"/>
+				<chocks alias="/services/chokes/nose"/>
+				<steer-cmd-norm alias="/fdm/jsbsim/hydraulics/tiller/autopush-cmd"/>
+				<yaw alias="/fdm/jsbsim/fcs/steer-deg"/>
 				<yaw-mult type="float">1.0</yaw-mult>
 				<target-speed-km_h type="float">0.0</target-speed-km_h>
-				<K_p type="float">1.0</K_p>
-				<F_p type="float">0.1</F_p>
-				<K_i type="float">0.01</K_i>
-				<F_i type="float">2.0</F_i>
+				<K_p type="float">0.5</K_p>
+				<F_p type="float">0.15</F_p>
+				<K_i type="float">0.25</K_i>
+				<F_i type="float">0.1</F_i>
 				<K_d type="float">0.0</K_d>
 				<F_d type="float">0.0</F_d>
 				<driver>
@@ -157,11 +154,9 @@
 				<path>Aircraft/IDG-A33X/Systems/lower-ecam.xml</path>
 			</autopilot>
 			<autopilot n="9">
-				<path>Aircraft/IDG-A33X/Systems/fl2070_sound.xml</path>
-			</autopilot>
-			<autopilot n="10">
 				<path>Aircraft/IDG-A33X/Systems/pfd.xml</path>
 			</autopilot>
+			<!-- 10 is sound -->
 		</systems>
 
 		<sounde>
@@ -186,7 +181,11 @@
 		<menubar>
 			<default>
 				<menu n="100">
-					<label>IDG-A33X</label>
+					<label>|</label>
+					<enabled type="bool">false</enabled>
+				</menu>
+				<menu n="101">
+					<label>System</label>
 					<enabled type="bool">true</enabled>
 					<item>
 						<label>Aircraft Config</label>
@@ -207,7 +206,108 @@
 						</binding>
 					</item>
 				</menu>
-				<menu n="101">
+				<menu n="102">
+					<label>FMGC</label>
+					<item>
+						<label>FCU Autoflight</label>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>autopilot</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Route Manager</label>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>route-manager</dialog-name>
+						</binding>
+					</item>
+				</menu>
+				<menu n="103">
+					<label>DU</label>
+					<item>
+						<label>Captain's PFD</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_pfd.showPFD1();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>First Officer's PFD</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_pfd.showPFD2();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Captain's ND</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_nd.showNd();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>First Officer's ND</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_nd.showNd('right');
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Upper ECAM</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_ecam.showUpperECAM();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Lower ECAM</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_ecam.showLowerECAM();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>IESI</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_iesi.showIESI();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Left MCDU</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_mcdu.showMCDU1();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Right MCDU</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_mcdu.showMCDU2();
+							</script>
+						</binding>
+					</item>
+				</menu>
+				<menu n="104">
 					<label>Utilities</label>
 					<enabled type="bool">true</enabled>
 					<item>
@@ -231,10 +331,8 @@
 					<item>
 						<label>Pushback</label>
 						<binding>
-							<command>nasal</command>
-							<script>
-							acconfig.autopush_dlg.open();
-							</script>
+							<command>dialog-show</command>
+							<dialog-name>autopush</dialog-name>
 						</binding>
 					</item>
 					<item>
@@ -242,7 +340,9 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							acconfig.fail_dlg.open();
+							if (getprop("/options/system/allow-damage") != 1) {
+								acconfig.fail_dlg.open();
+							}
 							</script>
 						</binding>
 					</item>
@@ -252,87 +352,6 @@
 							<command>property-assign</command>
 							<property>/controls/adirs/skip</property>
 							<value>1</value>
-						</binding>
-					</item>
-					<item>
-						<label>Show Captain's PFD</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_pfd.showPFD1();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show First Officer's PFD</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_pfd.showPFD2();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show Captain's ND</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_nd.showNd();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show First Officer's ND</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_nd.showNd('right');
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show Upper ECAM</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_ecam.showUpperECAM();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show Lower ECAM</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_ecam.showLowerECAM();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show IESI</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_iesi.showIESI();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show Left MCDU</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_mcdu.showMCDU1();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Show Right MCDU</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_mcdu.showMCDU2();
-							</script>
 						</binding>
 					</item>
 				</menu>
@@ -377,7 +396,7 @@
 		
 		<flight-recorder include="Systems/flight-recorder.xml"/>
 		
-		<gui n="0" include="Systems/it-gui.xml"/>
+		<gui n="0" include="gui/it-gui.xml"/>
 		
 		<current-view>
 			<z-offset-default type="float">110.0</z-offset-default>
@@ -627,6 +646,8 @@
 			<overhead-panel-norm type="double">0</overhead-panel-norm>
 			<main-panel-pedestal-norm type="double">0</main-panel-pedestal-norm>
 			<strobe type="bool">0</strobe>
+			<no-smoking-sign type="bool">1</no-smoking-sign>
+			<seatbelt-sign type="bool">0</seatbelt-sign>
 			<taxi-light-switch type="float">0</taxi-light-switch>
 		</lighting>
 		<OH>
@@ -667,10 +688,11 @@
 			<battery-sel type="int">0</battery-sel>
 			<cart type="bool">0</cart>
 			<!-- Smoking is bad :P -->
-			<no-smoking-sign type="bool">1</no-smoking-sign>
-			<seatbelt-sign type="bool">0</seatbelt-sign>
+			<no-smoking-sign type="double">0.5</no-smoking-sign>
+			<seatbelt-sign type="double">0.5</seatbelt-sign>
 			<annun-test>0</annun-test>
 			<windowprobeheat type="double">0.5</windowprobeheat>
+			<strobe type="double">0.0</strobe>
 		</switches>
 		<tray n="0">
 			<lefttrayext type="double">0</lefttrayext>

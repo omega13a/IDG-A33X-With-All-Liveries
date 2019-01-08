@@ -1,22 +1,18 @@
 <?xml version="1.0"?>
 
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <turbine_engine name="CF6-80E1">
 	
 	<milthrust>     68530 </milthrust>
-	<tsfc>            0.5 </tsfc>
+	<tsfc>           0.39 </tsfc>
 	<bleed>          0.03 </bleed>
 	<idlen1>         23.7 </idlen1>
 	<idlen2>         62.9 </idlen2>
 	<n1spinup>        0.2 </n1spinup>
 	<n2spinup>        1.0 </n2spinup>
-	<maxn1>         105.6 </maxn1>
-	<maxn2>         103.7 </maxn2>
+	<maxn1>         111.2 </maxn1>
+	<maxn2>         107.6 </maxn2>
 	<augmented>         0 </augmented>
 	<injected>          0 </injected>
 	
