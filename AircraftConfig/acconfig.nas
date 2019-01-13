@@ -272,12 +272,14 @@ var colddark_b = func {
 	# Continues the Cold and Dark script, after engines fully shutdown.
 	setprop("/controls/APU/master", 0);
 	setprop("/controls/APU/start", 0);
-	setprop("/controls/gear/brake-left", 0);
-	setprop("/controls/gear/brake-right", 0);
-	setprop("/systems/acconfig/autoconfig-running", 0);
-	ps_load_dlg.close();
-	ps_loaded_dlg.open();
-	spinning.stop();
+	settimer(func {
+		setprop("/controls/gear/brake-left", 0);
+		setprop("/controls/gear/brake-right", 0);
+		setprop("/systems/acconfig/autoconfig-running", 0);
+		ps_load_dlg.close();
+		ps_loaded_dlg.open();
+		spinning.stop();
+	}, 2);
 }
 
 # Ready to Start Eng
@@ -353,12 +355,14 @@ var beforestart_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
-	setprop("/controls/gear/brake-left", 0);
-	setprop("/controls/gear/brake-right", 0);
-	setprop("/systems/acconfig/autoconfig-running", 0);
-	ps_load_dlg.close();
-	ps_loaded_dlg.open();
-	spinning.stop();
+	settimer(func {
+		setprop("/controls/gear/brake-left", 0);
+		setprop("/controls/gear/brake-right", 0);
+		setprop("/systems/acconfig/autoconfig-running", 0);
+		ps_load_dlg.close();
+		ps_loaded_dlg.open();
+		spinning.stop();
+	}, 2);
 }
 
 # Ready to Taxi

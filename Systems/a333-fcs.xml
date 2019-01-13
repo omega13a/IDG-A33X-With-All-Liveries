@@ -1797,6 +1797,9 @@
 		
 		<switch name="fcs/flap-pos-rate">
 			<default value="0.0"/>
+			<test value="100">
+				/systems/acconfig/autoconfig-running eq 1
+			</test>
 			<test logic="OR" value="1.16666666">
 				/systems/hydraulic/green-psi ge 1500
 				/systems/hydraulic/yellow-psi ge 1500
@@ -1833,6 +1836,9 @@
 		
 		<switch name="fcs/slat-pos-rate">
 			<default value="0.0"/>
+			<test value="100">
+				/systems/acconfig/autoconfig-running eq 1
+			</test>
 			<test logic="OR" value="1.35">
 				/systems/hydraulic/blue-psi ge 1500
 				/systems/hydraulic/green-psi ge 1500

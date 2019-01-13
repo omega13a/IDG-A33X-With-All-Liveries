@@ -767,6 +767,9 @@
 	</services>
 	
 	<systems>
+		<acconfig n="0">
+			<autoconfig-running>0</autoconfig-running>
+		</acconfig>
 		<electrical n="0">
 			<bus n="0">
 				<dc-ess>0</dc-ess>
