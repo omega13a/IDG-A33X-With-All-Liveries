@@ -438,6 +438,7 @@ var taxi_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/controls/lighting/taxi-light-switch", 0.5);
 	settimer(taxi_c, 2);
 }
 var taxi_c = func {
@@ -454,7 +455,6 @@ var taxi_d = func {
 	setprop("/controls/APU/master", 0);
 	setprop("/controls/APU/start", 0);
 	setprop("/controls/pneumatic/switches/bleedapu", 0);
-	setprop("/controls/lighting/taxi-light-switch", 1);
 	setprop("/controls/gear/brake-left", 0);
 	setprop("/controls/gear/brake-right", 0);
 	setprop("/systems/acconfig/autoconfig-running", 0);
@@ -472,8 +472,8 @@ var takeoff = func {
 			if (getprop("/engines/engine[0]/state") == 3) {
 				removelistener(eng_one_chk_c);
 				setprop("/controls/lighting/strobe", 1);
+				setprop("/controls/lighting/taxi-light-switch", 1);
 				setprop("/controls/lighting/landing-lights[1]", 1);
-				setprop("/controls/lighting/landing-lights[2]", 1);
 				setprop("/controls/flight/speedbrake-arm", 1);
 				setprop("/controls/flight/flaps", 0.290);
 				setprop("/controls/flight/slats", 0.666);
