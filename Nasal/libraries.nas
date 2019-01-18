@@ -242,17 +242,6 @@ var systemsLoop = maketimer(0.1, func {
 		setprop("/instrumentation/mk-viii/speaker/volume", 2);
 	}
 	
-	if (getprop("/gear/gear[1]/gear-tilt-deg") < 40) {
-		setprop("/gear/gear[3]/wowa", 1);
-	} else {
-		setprop("/gear/gear[3]/wowa", 0);
-	}
-	if (getprop("/gear/gear[2]/gear-tilt-deg") < 40) {
-		setprop("/gear/gear[4]/wowa", 1);
-	} else {
-		setprop("/gear/gear[4]/wowa", 0);
-	}
-	
 	if ((getprop("/sim/replay/time") == 0) or (getprop("/sim/replay/time") == nil)) {
 		setprop("/aircraft/wingflex-enable", 1);
 	} else {
