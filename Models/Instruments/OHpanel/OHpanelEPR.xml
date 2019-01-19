@@ -246,6 +246,20 @@
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>MarkingLts</object-name>
+		<condition>
+			<not>
+				<and>
+					<greater-than>
+						<property>sim/model/lights/dome-light</property>
+						<value>0</value>
+					</greater-than>
+					<less-than>
+						<property>controls/lighting/overhead-panel-norm</property>
+						<value>0.25</value>
+					</less-than>
+				</and>
+			</not>
+		</condition>
 		<emission>
 			<red>1</red>
 			<green>0.824</green>
@@ -279,4 +293,17 @@
 			<factor-prop>sim/model/lights/dome-light</factor-prop>
 		</emission>
 	</animation>
+	
+	<animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>Panel</object-name>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>sim/model/lights/dome-light</factor-prop>
+		</emission>
+	</animation>
+
 </PropertyList>
