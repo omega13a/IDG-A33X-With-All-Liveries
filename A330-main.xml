@@ -637,6 +637,8 @@
 			<landing-lights n="0" type="double">0</landing-lights>
 			<landing-lights n="1" type="double">0</landing-lights>
 			<landing-lights n="2" type="double">0</landing-lights>
+			<ped-flood-knb type="double">0</ped-flood-knb>
+			<ped-flood-norm type="double">0</ped-flood-norm>
 			<main-flood-knb type="double">0</main-flood-knb>
 			<main-flood-norm type="double">0</main-flood-norm>
 			<main-panel-knb type="double">0</main-panel-knb>
@@ -1470,6 +1472,16 @@
 					<command>property-assign</command>
 					<property>/controls/flight/speedbrake-arm</property>
 					<value>0</value>
+				</binding>
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Flashlight</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>sim/rendering/als-secondary-lights/use-flashlight</property>
+					<value>0</value>
+					<value>1</value>
 				</binding>
 			</key>
 		</keyboard>

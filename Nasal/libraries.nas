@@ -47,6 +47,7 @@ var strobe_light = props.globals.getNode("/controls/lighting/strobe", 1);
 var tail_strobe = aircraft.light.new("/sim/model/lights/tailstrobe", [0.1, 1], "/controls/lighting/strobe");
 var logo_lights = getprop("/sim/model/lights/logo-lights");
 var nav_lights = props.globals.getNode("/sim/model/lights/nav-lights");
+var dome_light = props.globals.initNode("/sim/model/lights/dome-light", 0.0, "DOUBLE");
 var wow = getprop("/gear/gear[2]/wow");
 var slats = getprop("/controls/flight/slats");
 var gear = getprop("/gear/gear[0]/position-norm");
@@ -56,6 +57,7 @@ var right_turnoff_light = props.globals.getNode("/controls/lighting/rightturnoff
 var settingT = getprop("/controls/lighting/taxi-light-switch");
 var settingTurnoff = getprop("/controls/lighting/turnoff-light-switch");
 var setting = getprop("/controls/lighting/nav-lights-switch");
+var domeSetting = getprop("/controls/lighting/dome-norm");
 var land = getprop("/controls/lighting/landing-lights[1]");
 
 ###################
@@ -463,7 +465,8 @@ var lightsLoop = maketimer(0.2, func {
 	gear = getprop("/gear/gear[0]/position-norm");
 	nose_lights = getprop("/sim/model/lights/nose-lights");
 	settingT = getprop("/controls/lighting/taxi-light-switch");
-	
+	domeSetting = getprop("/controls/lighting/dome-norm");
+
 	# nose lights
 	
 	if (settingT == 0.5 and gear > 0.9 and (getprop("/systems/electrical/bus/ac1") > 0 or getprop("/systems/electrical/bus/ac2") > 0)) {
@@ -520,6 +523,14 @@ var lightsLoop = maketimer(0.2, func {
 		nav_lights.setBoolValue(1);
 	} else {
 		nav_lights.setBoolValue(0);
+	}
+	
+	if (domeSetting == 0.5 and getprop("/systems/electrical/bus/dc-ess") > 0) {
+		dome_light.setValue(0.5);
+	} elsif (domeSetting == 1 and getprop("/systems/electrical/bus/dc-ess") > 0) {
+		dome_light.setValue(1);
+	} else {
+		dome_light.setValue(0);
 	}
 	
 	# strobe
