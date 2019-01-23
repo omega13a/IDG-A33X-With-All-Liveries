@@ -679,7 +679,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<toradians><property>hydraulics/rudder/final-deg</property></toradians>
-				<value>0.075</value>
+				<value>0.071</value>
 			</product>
 		</function>
 	
