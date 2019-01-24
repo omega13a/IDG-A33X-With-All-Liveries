@@ -529,11 +529,6 @@
 			<output>fbw/roll/pid</output>
 		</pid>
 		
-		<pure_gain name="fbw/roll/rudder-inv">
-			<input>fbw/fmgc/yaw-cmd</input>
-			<gain>-0.5</gain>
-		</pure_gain>
-		
 		<switch name="fbw/roll/gear-law-switch">
 			<default value="0"/>
 			<test logic="OR" value="1">
@@ -542,6 +537,24 @@
 				/it-fbw/law eq 2
 			</test>
 		</switch>
+		
+		<fcs_function name="fbw/roll/rollout-cmd">
+			<function>
+				<product>
+					<table>
+						<independentVar lookup="row">/orientation/roll-deg</independentVar>
+						<tableData>
+							-30 -30
+							 -1   0
+							  0   0
+							  1   0
+							 30  30
+						</tableData>
+					</table>
+					<value>-0.1</value>
+				</product>
+			</function>
+		</fcs_function>
 		
 		<switch name="fbw/aileron-output">
 			<default value="0"/>
@@ -553,7 +566,7 @@
 				fbw/fmgc/enabled eq 0
 				fbw/roll/gear-law-switch eq 1
 			</test>
-			<test logic="AND" value="fbw/roll/rudder-inv">
+			<test logic="AND" value="fbw/roll/rollout-cmd">
 				fbw/fmgc/enabled eq 1
 				position/wow eq 1
 				/it-fbw/law eq 0
@@ -1009,6 +1022,11 @@
 				fbw/pitch/law-gear-switch eq 1
 			</test>
 			<test logic="AND" value="0.1">
+				fbw/fmgc/enabled eq 1
+				position/wow eq 1
+				gear/unit[0]/WOW eq 0
+			</test>
+			<test logic="AND" value="0.05">
 				fbw/fmgc/enabled eq 1
 				position/wow eq 1
 			</test>

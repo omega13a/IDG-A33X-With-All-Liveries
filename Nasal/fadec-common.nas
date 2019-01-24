@@ -275,10 +275,14 @@ var thrust_loop = maketimer(0.04, func {
 			setprop("/systems/thrust/alpha-floor", 1);
 			setprop("/systems/thrust/toga-lk", 0);
 			setprop("/it-autoflight/input/athr", 1);
+			setprop("/controls/engines/engine[0]/throttle-fdm", 0.99);
+			setprop("/controls/engines/engine[1]/throttle-fdm", 0.99);
 		} else if (getprop("/systems/thrust/alpha-floor") == 1 and alpha < togaLock) {
 			setprop("/systems/thrust/alpha-floor", 0);
 			setprop("/it-autoflight/input/athr", 1);
 			setprop("/systems/thrust/toga-lk", 1);
+			setprop("/controls/engines/engine[0]/throttle-fdm", 0.99);
+			setprop("/controls/engines/engine[1]/throttle-fdm", 0.99);
 		}
 	} else {
 		setprop("/systems/thrust/alpha-floor", 0);
