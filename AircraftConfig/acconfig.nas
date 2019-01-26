@@ -190,7 +190,7 @@ var renderingSettings = {
 		var ALS = getprop("/sim/rendering/shaders/skydome");
 		var customSettings = getprop("/sim/rendering/shaders/custom-settings") == 1;
 		var landmass = getprop("/sim/rendering/shaders/landmass") >= 4;
-		var model = getprop("/sim/rendering/shaders/model") >= 1;
+		var model = getprop("/sim/rendering/shaders/model") >= 2;
 		if (!rembrandt and (!ALS or !customSettings or !landmass or !model)) {
 			rendering_dlg.open();
 		}
@@ -198,12 +198,12 @@ var renderingSettings = {
 	fixAll: func() {
 		me.fixCore();
 		var landmass = getprop("/sim/rendering/shaders/landmass") >= 4;
-		var model = getprop("/sim/rendering/shaders/model") >= 1;
+		var model = getprop("/sim/rendering/shaders/model") >= 2;
 		if (!landmass) {
 			setprop("/sim/rendering/shaders/landmass", 4);
 		}
 		if (!model) {
-			setprop("/sim/rendering/shaders/model", 1);
+			setprop("/sim/rendering/shaders/model", 2);
 		}
 	},
 	fixCore: func() {
@@ -272,12 +272,14 @@ var colddark_b = func {
 	# Continues the Cold and Dark script, after engines fully shutdown.
 	setprop("/controls/APU/master", 0);
 	setprop("/controls/APU/start", 0);
-	setprop("/controls/gear/brake-left", 0);
-	setprop("/controls/gear/brake-right", 0);
-	setprop("/systems/acconfig/autoconfig-running", 0);
-	ps_load_dlg.close();
-	ps_loaded_dlg.open();
-	spinning.stop();
+	settimer(func {
+		setprop("/controls/gear/brake-left", 0);
+		setprop("/controls/gear/brake-right", 0);
+		setprop("/systems/acconfig/autoconfig-running", 0);
+		ps_load_dlg.close();
+		ps_loaded_dlg.open();
+		spinning.stop();
+	}, 2);
 }
 
 # Ready to Start Eng
@@ -353,12 +355,14 @@ var beforestart_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
-	setprop("/controls/gear/brake-left", 0);
-	setprop("/controls/gear/brake-right", 0);
-	setprop("/systems/acconfig/autoconfig-running", 0);
-	ps_load_dlg.close();
-	ps_loaded_dlg.open();
-	spinning.stop();
+	settimer(func {
+		setprop("/controls/gear/brake-left", 0);
+		setprop("/controls/gear/brake-right", 0);
+		setprop("/systems/acconfig/autoconfig-running", 0);
+		ps_load_dlg.close();
+		ps_loaded_dlg.open();
+		spinning.stop();
+	}, 2);
 }
 
 # Ready to Taxi
@@ -434,6 +438,7 @@ var taxi_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/controls/lighting/taxi-light-switch", 0.5);
 	settimer(taxi_c, 2);
 }
 var taxi_c = func {
@@ -450,7 +455,6 @@ var taxi_d = func {
 	setprop("/controls/APU/master", 0);
 	setprop("/controls/APU/start", 0);
 	setprop("/controls/pneumatic/switches/bleedapu", 0);
-	setprop("/controls/lighting/taxi-light-switch", 1);
 	setprop("/controls/gear/brake-left", 0);
 	setprop("/controls/gear/brake-right", 0);
 	setprop("/systems/acconfig/autoconfig-running", 0);
@@ -468,8 +472,8 @@ var takeoff = func {
 			if (getprop("/engines/engine[0]/state") == 3) {
 				removelistener(eng_one_chk_c);
 				setprop("/controls/lighting/strobe", 1);
+				setprop("/controls/lighting/taxi-light-switch", 1);
 				setprop("/controls/lighting/landing-lights[1]", 1);
-				setprop("/controls/lighting/landing-lights[2]", 1);
 				setprop("/controls/flight/speedbrake-arm", 1);
 				setprop("/controls/flight/flaps", 0.290);
 				setprop("/controls/flight/slats", 0.666);

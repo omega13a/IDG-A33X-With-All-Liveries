@@ -3,7 +3,21 @@
 <!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
-
+	
+	<!-- Drogues -->
+	
+	<animation>
+		<type>select</type>
+		<object-name>refuelProbeLeft</object-name>
+		<object-name>refuelProbeRight</object-name>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/float[16]</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
 	<!-- Boom -->
 	
 	<animation>
@@ -17,30 +31,16 @@
 		</condition>
 	</animation>
 	
-	<!-- Drogues -->
-	
-	<animation>
-		<type>select</type>
-		<object-name>refuelProbeLeft</object-name>
-		<object-name>refuelProbeRight</object-name>
-		<condition>
-			<equals>
-				<property>sim/multiplay/generic/float[12]</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
-	
 	<animation>
 		<name>Boom rotate</name>
 		<type>rotate</type>
 		<object-name>refuelBoom</object-name>
 		<object-name>refuelTube</object-name>
-		<property>sim/multiplay/generic/float[16]</property>
+		<property>sim/multiplay/generic/float[12]</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.0</ind><dep> 0</dep></entry>
 			<entry><ind>0.7</ind><dep>40</dep></entry>
-			<entry><ind>1</ind><dep>40</dep></entry>
+			<entry><ind>1.0</ind><dep>40</dep></entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -58,11 +58,11 @@
 		<name>Boom extend</name>
 		<type>translate</type>
 		<object-name>refuelTube</object-name>
-		<property>sim/multiplay/generic/float[16]</property>
+		<property>sim/multiplay/generic/float[12]</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.7</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>4.0</dep></entry>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>0.7</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>4.0</dep></entry>
 		</interpolation>
 		<axis>
 			<x1-m>26.4575</x1-m>

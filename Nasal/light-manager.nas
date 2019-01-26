@@ -177,7 +177,6 @@ var light_manager = {
 		
 		if (als_on == 1 and alt_agl < 100.0) {
 			ll1 = getprop("controls/lighting/landing-lights[1]");
-			ll2 = getprop("controls/lighting/landing-lights[2]");
 			ll3 = getprop("sim/model/lights/nose-lights");
 			nav = getprop("/sim/model/lights/nav-lights");
 			

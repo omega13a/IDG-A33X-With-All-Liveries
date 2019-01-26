@@ -38,7 +38,6 @@ var variousReset = func {
 	setprop("/controls/lighting/wing-lights", 0);
 	setprop("/controls/lighting/nav-lights-switch", 0);
 	setprop("/controls/lighting/landing-lights[1]", 0);
-	setprop("/controls/lighting/landing-lights[2]", 0);
 	setprop("/controls/lighting/taxi-light-switch", 0);
 	setprop("/controls/lighting/DU/du1", 1);
 	setprop("/controls/lighting/DU/du2", 1);

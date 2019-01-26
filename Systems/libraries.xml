@@ -184,7 +184,29 @@
 		<min>-40</min>
 		<max>40</max>
 	</filter>
-
+	
+	<logic>
+		<name>Gear Tilt 1 WOW</name>
+		<input>
+			<less-than>
+				<property>/gear/gear[1]/gear-tilt-deg</property>
+				<value>40</value>
+			</less-than>
+		</input>
+		<output>/gear/gear[3]/wowa</output>
+	</logic>
+	
+	<logic>
+		<name>Gear Tilt 2 WOW</name>
+		<input>
+			<less-than>
+				<property>/gear/gear[2]/gear-tilt-deg</property>
+				<value>40</value>
+			</less-than>
+		</input>
+		<output>/gear/gear[4]/wowa</output>
+	</logic>
+	
 	<filter>
 		<name>FF 1</name>
 		<type>exponential</type>

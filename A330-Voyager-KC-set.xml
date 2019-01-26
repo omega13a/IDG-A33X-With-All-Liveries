@@ -148,7 +148,7 @@
 		
 		<menubar>
 			<default>
-				<menu n="100">
+				<menu n="101">
 					<item n="2">
 						<label>Toggle Boom</label>
 						<binding>
@@ -195,8 +195,8 @@
 		<eng>RR</eng>
 		<maxblock>306.6</maxblock>
 		<hasboom type="bool">0</hasboom>
-		<boom-pos-norm type="double">0</boom-pos-norm>
-		<drogue-pos-norm type="double">0</drogue-pos-norm>
+		<boom-pos-cmd type="double">0</boom-pos-cmd>
+		<drogue-pos-cmd type="double">0</drogue-pos-cmd>
 	</options>
 	
 	<MCDUC n="0">

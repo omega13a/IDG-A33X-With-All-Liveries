@@ -373,11 +373,11 @@
 				<float n="9" alias="/gear/gear[1]/gear-tilt-deg"/>
 				<float n="10" alias="/gear/gear[2]/gear-tilt-deg"/>
 				<float n="11" alias="/fdm/jsbsim/fcs/slat-pos-norm"/>
-				<float n="12" alias="/options/drogue-pos-norm"/>
+				<float n="12" alias="/fdm/jsbsim/fcs/boom-norm"/>
 				<float n="13" alias="/fdm/jsbsim/hydraulics/aileron-out-l/final-deg"/>
 				<float n="14" alias="/fdm/jsbsim/hydraulics/aileron-out-r/final-deg"/>
 				<float n="15" alias="/aircraft/wingflex"/>
-				<float n="16" alias="/options/boom-pos-norm"/>
+				<float n="16" alias="/fdm/jsbsim/fcs/drogue-norm"/>
 				<float n="17" alias="/fdm/jsbsim/hydraulics/elevator-trim/final-deg"/>
 				<int n="2" alias="/controls/lighting/landing-lights[0]"/>
 				<int n="3" alias="/controls/lighting/landing-lights[1]"/>
@@ -637,6 +637,8 @@
 			<landing-lights n="0" type="double">0</landing-lights>
 			<landing-lights n="1" type="double">0</landing-lights>
 			<landing-lights n="2" type="double">0</landing-lights>
+			<ped-flood-knb type="double">0</ped-flood-knb>
+			<ped-flood-norm type="double">0</ped-flood-norm>
 			<main-flood-knb type="double">0</main-flood-knb>
 			<main-flood-norm type="double">0</main-flood-norm>
 			<main-panel-knb type="double">0</main-panel-knb>
@@ -767,6 +769,9 @@
 	</services>
 	
 	<systems>
+		<acconfig n="0">
+			<autoconfig-running>0</autoconfig-running>
+		</acconfig>
 		<electrical n="0">
 			<bus n="0">
 				<dc-ess>0</dc-ess>
@@ -1467,6 +1472,16 @@
 					<command>property-assign</command>
 					<property>/controls/flight/speedbrake-arm</property>
 					<value>0</value>
+				</binding>
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Flashlight</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>sim/rendering/als-secondary-lights/use-flashlight</property>
+					<value>0</value>
+					<value>1</value>
 				</binding>
 			</key>
 		</keyboard>
