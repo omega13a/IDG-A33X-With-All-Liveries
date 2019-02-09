@@ -14,11 +14,11 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	</fileheader>
 	
 	<metrics file="Systems/a332-metrics"/>
-	<mass_balance file="Systems/a332kc-mass-balance"/>
+	<mass_balance file="Systems/a332f-mass-balance"/>
 	<ground_reactions file="Systems/a332-ground-reactions"/>
 	
 	<propulsion>
-		<engine file="trent772c-60_1">
+		<engine file="trent772b-60_1">
 			<location unit="M">
 				<x> -2.7034 </x>	
 				<y> -9.40138 </y>
@@ -44,7 +44,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 			</thruster>
 		</engine>
 		
-		<engine file="trent772c-60_2">
+		<engine file="trent772b-60_2">
 			<location unit="M">
 				<x> -2.7034 </x>	
 				<y> 9.40138 </y>
@@ -137,7 +137,6 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	<system file="glass-effect1"/>
 	<system file="a332-fcs"/>
 	<system file="a330-spoiler"/>
-	<system file="refuel"/>
 	<system file="a330-lights"/>
 	
 	<flight_control name="none"/>

@@ -11,7 +11,7 @@
 	<ixy unit="SLUG*FT2">       0 </ixy>
 	<ixz unit="SLUG*FT2">       0 </ixz>
 	<iyz unit="SLUG*FT2">       0 </iyz>
-	<emptywt unit="LBS" >  224000 </emptywt>
+	<emptywt unit="LBS" >  214000 </emptywt>
 	
 	<location name="CG" unit="M">
 		<x> 0.48086 </x>
@@ -20,7 +20,7 @@
 	</location>
 	
 	<pointmass name="Crew">
-		<weight unit="LBS">380</weight>
+		<weight unit="LBS">320</weight>
 		<location name="POINTMASS" unit="M">
 			<x> -22.9127 </x>
 			<y> 0 </y>
@@ -28,39 +28,57 @@
 		</location>
 	</pointmass>
 	
-	<pointmass name="PAX">
-		<weight unit="LBS">39000</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 0.48086 </x>
+	<pointmass name="Forward Cabin">
+		<weight unit="LBS">7337</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> -14.1 </x>
 			<y> 0 </y>
-			<z> 0.25204 </z>
+			<z> 1.0 </z>
 		</location>
 	</pointmass>
 	
-	<pointmass name="Fwd Cargo">
-		<weight unit="LBS">3000</weight>
-		<location name="POINTMASS" unit="M"> 
-			<x> -6.08922 </x>
+	<pointmass name="Center Cabin">
+		<weight unit="LBS">21149</weight>
+		<location name="POINTMASS" unit="M">
+			<x> -0.7 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> 1.0 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Aft Cabin">
+		<weight unit="LBS">20070</weight>
+		<location name="POINTMASS" unit="M">
+			<x> 8.8 </x>
+			<y> 0 </y>
+			<z> 1.0 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Forward Cargo">
+		<weight unit="LBS">18434</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> -5.7</x>
+			<y> 0 </y>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 	
 	<pointmass name="Aft Cargo">
-		<weight unit="LBS">3000</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 12.5936 </x>
+		<weight unit="LBS">18434</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 5.6 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 	
-	<pointmass name="Rear Bulk Cargo">
-		<weight unit="LBS">6500</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 15.253 </x>
+	<pointmass name="Aft Bulk Cargo">
+		<weight unit="LBS">0</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 14.3 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 </mass_balance>

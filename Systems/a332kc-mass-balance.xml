@@ -28,30 +28,12 @@
 		</location>
 	</pointmass>
 	
-	<pointmass name="Forward Cabin">
-		<weight unit="LBS">3514</weight>
+	<pointmass name="Fuel Tank">
+		<weight unit="LBS">54600</weight>
 		<location name="POINTMASS" unit="M"> 
-			<x> -13.2 </x>
-			<y> 0 </y>
-			<z> 1.0 </z>
-		</location>
-	</pointmass>
-	
-	<pointmass name="Center Cabin">
-		<weight unit="LBS">23721</weight>
-		<location name="POINTMASS" unit="M">
-			<x> -1.3 </x>
-			<y> 0 </y>
-			<z> 1.0 </z>
-		</location>
-	</pointmass>
-	
-	<pointmass name="Aft Cabin">
-		<weight unit="LBS">16692</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 8.1 </x>
-			<y> 0 </y>
-			<z> 1.0 </z>
+		<x> 0.48086 </x>
+		<y> 0 </y>
+		<z> 0.25204 </z>
 		</location>
 	</pointmass>
 	

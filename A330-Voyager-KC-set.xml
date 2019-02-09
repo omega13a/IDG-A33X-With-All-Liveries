@@ -9,7 +9,7 @@
 		<sound>
 			<path>Aircraft/IDG-A33X/Sounds/rrtrent-sound.xml</path>
 		</sound>
-                <checklists include="A33X-Checklists.xml"/>
+		<checklists include="A33X-Checklists.xml"/>
 		<description>Airbus Voyager KC2/KC3 (RR Trent 772C-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-Voyager-KC</aero>
@@ -181,7 +181,40 @@
 		</systems>
 		
 	</sim>
-        
+	
+	<payload>
+		<weight n="0">
+			<name>Cockpit Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">200</min-lb>
+			<max-lb type="double">440</max-lb>
+		</weight>
+		<weight n="1">
+			<name>Fuel Tank</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">300</min-lb>
+			<max-lb type="double">109200</max-lb>
+		</weight>
+		<weight n="2">
+			<name>Forward Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">300</min-lb>
+			<max-lb type="double">41667</max-lb>
+		</weight>
+		<weight n="3">
+			<name>Aft Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">300</min-lb>
+			<max-lb type="double">33444</max-lb>
+		</weight>
+		<weight n="4">
+			<name>Aft Bulk Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<min-lb type="double">300</min-lb>
+			<max-lb type="double">7716</max-lb>
+		</weight>
+	</payload>
+	
 	<limits>
 		<mass-and-balance> <!-- Data source: https://en.wikipedia.org/wiki/Airbus_A330_MRTT#Specifications -->
 			<maximum-takeoff-mass-lbs>514000</maximum-takeoff-mass-lbs>
