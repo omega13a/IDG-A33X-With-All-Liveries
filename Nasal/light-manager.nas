@@ -237,11 +237,8 @@ var light_manager = {
 			
 
 			# light 1 position
-	 
-			#var alt_agl = getprop("/position/altitude-agl-ft");
-	 
-			var proj_x = alt_agl;
-			var proj_z = alt_agl/10.0;
+			var proj_x = cur_alt;
+			var proj_z = cur_alt/10.0;
 	 
 			apos.set_lat(lat + ((me.light1_xpos + proj_x) * ch + me.light1_ypos * sh) / me.lat_to_m);
 			apos.set_lon(lon + ((me.light1_xpos + proj_x)* sh - me.light1_ypos * ch) / me.lon_to_m);
