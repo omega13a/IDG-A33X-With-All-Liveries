@@ -1118,7 +1118,7 @@
 	</animation>
 	
 	<effect>
-		<inherits-from>Aircraft/IDG-A32X/Models/Effects/cockpit-irradiance</inherits-from>
+		<inherits-from>Aircraft/IDG-A33X/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>Panel</object-name>
 		<object-name>Eng1FireCover</object-name>
 		<object-name>Eng2FireCover</object-name>
