@@ -3540,7 +3540,7 @@
 				<property>it-autoflight/input/spd-mach</property>
 				<step>0.001</step>
 				<min>0.50</min>
-				<max>0.82</max>
+				<max>0.86</max>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -3590,7 +3590,7 @@
 				<property>it-autoflight/input/spd-mach</property>
 				<step>-0.001</step>
 				<min>0.50</min>
-				<max>0.82</max>
+				<max>0.86</max>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
