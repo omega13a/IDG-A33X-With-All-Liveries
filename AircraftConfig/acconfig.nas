@@ -471,7 +471,7 @@ var takeoff = func {
 		var eng_one_chk_c = setlistener("/engines/engine[0]/state", func {
 			if (getprop("/engines/engine[0]/state") == 3) {
 				removelistener(eng_one_chk_c);
-				setprop("/controls/lighting/strobe", 1);
+				setprop("/controls/switches/strobe", 0.5);
 				setprop("/controls/lighting/taxi-light-switch", 1);
 				setprop("/controls/lighting/landing-lights[1]", 1);
 				setprop("/controls/flight/speedbrake-arm", 1);
