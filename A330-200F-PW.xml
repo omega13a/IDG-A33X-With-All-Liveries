@@ -14,7 +14,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	</fileheader>
 	
 	<metrics file="Systems/a332-metrics"/>
-	<mass_balance file="Systems/a332-mass-balance"/>
+	<mass_balance file="Systems/a332f-mass-balance"/>
 	<ground_reactions file="Systems/a332-ground-reactions"/>
 	
 	<propulsion>

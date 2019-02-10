@@ -20,47 +20,65 @@
 	</location>
 	
 	<pointmass name="Crew">
-		<weight unit="LBS">380</weight>
+		<weight unit="LBS">320</weight>
 		<location name="POINTMASS" unit="M">
 			<x> -20.1707 </x>
 			<y> 0 </y>
-			<z> 0.1561 </z>
+			<z> 1.2 </z>
 		</location>
 	</pointmass>
 	
-	<pointmass name="PAX">
-		<weight unit="LBS">39000</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 0.48086 </x>
-			<y> 0 </y>
-			<z> 0.25204 </z>
-		</location>
-	</pointmass>
-	
-	<pointmass name="Fwd Cargo">
-		<weight unit="LBS">3000</weight>
+	<pointmass name="Forward Cabin">
+		<weight unit="LBS">3514</weight>
 		<location name="POINTMASS" unit="M"> 
-			<x> -6.08922 </x>
+			<x> -13.2 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> 1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Center Cabin">
+		<weight unit="LBS">23721</weight>
+		<location name="POINTMASS" unit="M">
+			<x> -1.3 </x>
+			<y> 0 </y>
+			<z> 1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Aft Cabin">
+		<weight unit="LBS">16692</weight>
+		<location name="POINTMASS" unit="M">
+			<x> 8.1 </x>
+			<y> 0 </y>
+			<z> 1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Forward Cargo">
+		<weight unit="LBS">20594</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> -5.7</x>
+			<y> 0 </y>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 	
 	<pointmass name="Aft Cargo">
-		<weight unit="LBS">3000</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 12.5936 </x>
+		<weight unit="LBS">20594</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 5.6 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 	
-	<pointmass name="Rear Bulk Cargo">
-		<weight unit="LBS">6500</weight>
-		<location name="POINTMASS" unit="M">
-			<x> 15.253 </x>
+	<pointmass name="Aft Bulk Cargo">
+		<weight unit="LBS">0</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 14.3 </x>
 			<y> 0 </y>
-			<z> -1.02745 </z>
+			<z> -1.2 </z>
 		</location>
 	</pointmass>
 </mass_balance>

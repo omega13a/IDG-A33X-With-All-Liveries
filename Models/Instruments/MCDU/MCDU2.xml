@@ -1900,7 +1900,7 @@
 	</animation>
 	
 	<effect>
-		<inherits-from>Aircraft/IDG-A32X/Models/Effects/cockpit-irradiance</inherits-from>
+		<inherits-from>Aircraft/IDG-A33X/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>mcdu_body</object-name>
 		<object-name>mcdu_glare</object-name>
 	</effect>
