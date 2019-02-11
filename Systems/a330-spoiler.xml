@@ -84,6 +84,11 @@
 			</function>
 		</fcs_function>
 		
+		<lag_filter name="spoilers/main-lever">
+			<input>spoilers/speedbrake-nul</input>
+			<c1>20</c1>
+		</lag_filter>
+		
 		<summer name="spoilers/main-cmd">
 			<input>spoilers/speedbrake-nul</input>
 			<input>spoilers/auto-speedbrake-cmd</input>
@@ -93,6 +98,11 @@
 			</clipto>
 			<output>fbw/spoiler-output</output>
 		</summer>
+		
+		<lag_filter name="spoilers/lever-arm">
+			<input>/controls/flight/speedbrake-arm</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	

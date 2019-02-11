@@ -1819,6 +1819,55 @@
 			<output>/engines/engine[1]/n2-actual</output>
 			<output>/engines/engine[4]/n2</output>
 		</lag_filter>
+		
+		<lag_filter name="fcs/throttle-lever[0]">
+			<input>/controls/engines/engine[0]/throttle-lever</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/throttle-lever[1]">
+			<input>/controls/engines/engine[1]/throttle-lever</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/reverse-lever[0]">
+			<input>/controls/engines/engine[0]/reverser</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/reverse-lever[1]">
+			<input>/controls/engines/engine[1]/reverser</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/reverse-thr-lever[0]">
+			<input>/controls/engines/engine[0]/throttle-rev</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/reverse-thr-lever[1]">
+			<input>/controls/engines/engine[1]/throttle-rev</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/engine-cutoff[0]">
+			<input>/controls/engines/engine[0]/cutoff-switch</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcs/engine-cutoff[1]">
+			<input>/controls/engines/engine[1]/cutoff-switch</input>
+			<c1>20</c1>
+		</lag_filter>
+	
+	</channel>
+	
+	<channel name="SFCC">
+		
+		<lag_filter name="fcs/flap-lever">
+			<input>/controls/flight/flap-lever</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	
@@ -1975,6 +2024,11 @@
 	</channel>
 	
 	<channel name="Brakes">
+		
+		<lag_filter name="fcs/brake-lever">
+			<input>/controls/gear/brake-parking</input>
+			<c1>20</c1>
+		</lag_filter>
 		
 		<pure_gain name="/services/chokes/nose-half">
 			<input>/services/chokes/nose</input>
