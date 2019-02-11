@@ -24,7 +24,7 @@
 		<location name="POINTMASS" unit="M">
 			<x> -20.1707 </x>
 			<y> 0 </y>
-			<z> 0.1561 </z>
+			<z> 1.2 </z>
 		</location>
 	</pointmass>
 	
