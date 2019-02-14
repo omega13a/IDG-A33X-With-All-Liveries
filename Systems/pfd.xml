@@ -339,7 +339,7 @@
 	</filter>
 	
 	<filter>
-		<name>Speed Predictor Exponential</name>
+		<name>Slip/Skid Indicator</name>
 		<debug>false</debug>
 		<type>exponential</type>
 		<input>
