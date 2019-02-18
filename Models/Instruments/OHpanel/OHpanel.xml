@@ -5945,7 +5945,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/lighting/beacon</property>
+				<property>controls/switches/beacon</property>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -5957,7 +5957,7 @@
 		<name>Beacon lights rotate</name>
 		<type>rotate</type>
 		<object-name>BeaconLtSwtch</object-name>
-		<property>controls/lighting/beacon</property>
+		<property>controls/switches/beacon</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>35</dep></entry>
 			<entry><ind>1</ind><dep>-35</dep></entry>
@@ -5983,7 +5983,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/lighting/wing-lights</property>
+				<property>controls/switches/wing-lights</property>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -5995,7 +5995,7 @@
 		<name>Wing lights rotate</name>
 		<type>rotate</type>
 		<object-name>WingLtSwtch</object-name>
-		<property>controls/lighting/wing-lights</property>
+		<property>controls/switches/wing-lights</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>35</dep></entry>
 			<entry><ind>1</ind><dep>-35</dep></entry>
@@ -6133,7 +6133,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/lighting/landing-lights[1]</property>
+				<property>controls/switches/landing-lights</property>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -6146,7 +6146,7 @@
 		<name>landing light rotate</name>
 		<type>rotate</type>
 		<object-name>LandingLtSwtch</object-name>
-		<property>controls/lighting/landing-lights[1]</property>
+		<property>controls/switches/landing-lights</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>35</dep></entry>
 			<entry><ind>1</ind><dep>-35</dep></entry>

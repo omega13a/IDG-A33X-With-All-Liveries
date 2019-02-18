@@ -350,7 +350,7 @@ var beforestart_b = func {
 	systems.ADIRS.skip(1);
 	systems.ADIRS.skip(2);
 	setprop("/controls/adirs/mcducbtn", 1);
-	setprop("/controls/lighting/beacon", 1);
+	setprop("/controls/switches/beacon", 1);
 	setprop("/controls/lighting/nav-lights-switch", 1);
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
@@ -433,7 +433,7 @@ var taxi_b = func {
 	systems.ADIRS.skip(1);
 	systems.ADIRS.skip(2);
 	setprop("/controls/adirs/mcducbtn", 1);
-	setprop("/controls/lighting/beacon", 1);
+	setprop("/controls/switches/beacon", 1);
 	setprop("/controls/lighting/nav-lights-switch", 1);
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
@@ -473,7 +473,7 @@ var takeoff = func {
 				removelistener(eng_one_chk_c);
 				setprop("/controls/switches/strobe", 0.5);
 				setprop("/controls/lighting/taxi-light-switch", 1);
-				setprop("/controls/lighting/landing-lights[1]", 1);
+				setprop("/controls/switches/landing-lights", 1.0);
 				setprop("/controls/flight/speedbrake-arm", 1);
 				setprop("/controls/flight/flaps", 0.290);
 				setprop("/controls/flight/slats", 0.666);
