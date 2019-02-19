@@ -254,6 +254,13 @@ var colddark = func {
 		setprop("/controls/flight/speedbrake", 0);
 		setprop("/controls/gear/gear-down", 1);
 		setprop("/controls/flight/elevator-trim", 0);
+		setprop("/controls/switches/beacon", 0);
+		setprop("/controls/switches/strobe", 0.0);
+		setprop("/controls/switches/wing-lights", 0);
+		setprop("/controls/lighting/nav-lights-switch", 0);
+		setprop("/controls/lighting/turnoff-light-switch", 0);
+		setprop("/controls/lighting/taxi-light-switch", 0.0);
+		setprop("/controls/switches/landing-lights", 0.0);
 		libraries.systemsInit();
 		failReset();
 		if (getprop("/engines/engine[1]/n2-actual") < 2) {
@@ -351,6 +358,7 @@ var beforestart_b = func {
 	systems.ADIRS.skip(2);
 	setprop("/controls/adirs/mcducbtn", 1);
 	setprop("/controls/switches/beacon", 1);
+	setprop("/controls/switches/wing-lights", 1);
 	setprop("/controls/lighting/nav-lights-switch", 1);
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
@@ -438,6 +446,7 @@ var taxi_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/controls/lighting/turnoff-light-switch", 1);
 	setprop("/controls/lighting/taxi-light-switch", 0.5);
 	settimer(taxi_c, 2);
 }
@@ -471,7 +480,7 @@ var takeoff = func {
 		var eng_one_chk_c = setlistener("/engines/engine[0]/state", func {
 			if (getprop("/engines/engine[0]/state") == 3) {
 				removelistener(eng_one_chk_c);
-				setprop("/controls/switches/strobe", 0.5);
+				setprop("/controls/switches/strobe", 1);
 				setprop("/controls/lighting/taxi-light-switch", 1);
 				setprop("/controls/switches/landing-lights", 1.0);
 				setprop("/controls/flight/speedbrake-arm", 1);
