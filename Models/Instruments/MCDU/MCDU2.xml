@@ -786,7 +786,7 @@
 		<object-name>left</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>mcdu.arrowbutton("left", 1);</script>
@@ -810,7 +810,7 @@
 		<object-name>right</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>mcdu.arrowbutton("right", 1);</script>
@@ -834,7 +834,7 @@
 		<object-name>up</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>mcdu.arrowbutton("up", 1);</script>
@@ -858,7 +858,7 @@
 		<object-name>down</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>mcdu.arrowbutton("down", 1);</script>
