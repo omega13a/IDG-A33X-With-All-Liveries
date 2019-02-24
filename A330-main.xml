@@ -1057,11 +1057,7 @@
 				<desc>Autothrottle Disconnect</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						if (getprop("/it-autoflight/output/athr") == 1) {
-							setprop("/it-autoflight/input/athr", 0);
-						}
-					</script>
+					<script>libraries.APPanel.ATDiscSoft();</script>
 				</binding>
 			</key>
 			<key n="6">
@@ -1300,14 +1296,7 @@
 				<desc>Autopilot Disconnect</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						if (getprop("/it-autoflight/output/ap1") == 1) {
-							setprop("/it-autoflight/input/ap1", 0);
-						}
-						if (getprop("/it-autoflight/output/ap2") == 1) {
-							setprop("/it-autoflight/input/ap2", 0);
-						}
-					</script>
+					<script>libraries.APPanel.APDiscSoft();</script>
 				</binding>
 			</key>
 			<key n="70">
