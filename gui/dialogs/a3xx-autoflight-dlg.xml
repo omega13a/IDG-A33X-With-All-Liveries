@@ -859,9 +859,6 @@
 				<pref-width>55</pref-width>
 				<property>/it-autoflight/input/alt</property>
 				<live type="bool">true</live>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
 			</input>
 			
 			<button>
