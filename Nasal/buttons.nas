@@ -174,7 +174,7 @@ var iasNow = props.globals.getNode("/instrumentation/airspeed-indicator/indicate
 var machNow = props.globals.getNode("/instrumentation/airspeed-indicator/indicated-mach", 1);
 var spdManaged = props.globals.getNode("/it-autoflight/input/spd-managed", 1);
 var showHDG = props.globals.getNode("/it-autoflight/custom/show-hdg", 1);
-var trkfpaSW = props.globals.getNode("/it-autoflight/custom/trk-fpa", 1);
+var trkFpaSW = props.globals.getNode("/it-autoflight/custom/trk-fpa", 1);
 var latMode = props.globals.getNode("/it-autoflight/output/lat", 1);
 var vertMode = props.globals.getNode("/it-autoflight/output/vert", 1);
 var locArm = props.globals.getNode("/it-autoflight/output/loc-armed", 1);
@@ -470,7 +470,7 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 	},
 	VSPush: func() {
 		if (dcEss.getValue() >= 25) {
-			if (trkfpaSW.getBoolValue()) {
+			if (trkFpaSW.getBoolValue()) {
 				setprop("/it-autoflight/input/vert", 5);
 				setprop("/it-autoflight/input/fpa", 0);
 			} else {
@@ -481,7 +481,7 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 	},
 	VSPull: func() {
 		if (dcEss.getValue() >= 25) {
-			if (trkfpaSW.getBoolValue()) {
+			if (trkFpaSW.getBoolValue()) {
 				setprop("/it-autoflight/input/vert", 5);
 			} else {
 				setprop("/it-autoflight/input/vert", 1);
@@ -527,7 +527,7 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 					fpaSet.setValue(fpaTemp);
 				}
 			}
-			if ((vertMode.getValue() != 1 and !trkfpaSW.getBoolValue()) or (vertMode.getValue() != 5 and trkfpaSW.getBoolValue())) {
+			if ((vertMode.getValue() != 1 and !trkFpaSW.getBoolValue()) or (vertMode.getValue() != 5 and trkFpaSW.getBoolValue())) {
 				me.VSPull();
 			}
 		}
