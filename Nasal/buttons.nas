@@ -235,7 +235,7 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 			}
 		}
 	},
-	APDiscSoft: func() {
+	APDisc: func() {
 #		if (ap1.getBoolValue() or ap2.getBoolValue()) {
 #			libraries.apOff("soft", 0);
 #		} else {
@@ -249,7 +249,7 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 		setprop("it-autoflight/input/ap1", 0);
 		setprop("it-autoflight/input/ap2", 0);
 	},
-	ATDiscSoft: func() {
+	ATDisc: func() {
 #		if (athr.getBoolValue()) {
 #			libraries.athrOff("soft");
 #			setprop("/ECAM/warnings/master-caution-light", 1);

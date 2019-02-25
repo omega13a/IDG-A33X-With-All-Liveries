@@ -83,7 +83,7 @@
 			<pref-width>119</pref-width>
 			<binding>
 				<command>nasal</command>
-				<script>libraries.APPanel.ATDiscSoft();</script>
+				<script>libraries.APPanel.ATDisc();</script>
 			</binding>
 		</button>
 		<button>
@@ -91,7 +91,7 @@
 			<pref-width>119</pref-width>
 			<binding>
 				<command>nasal</command>
-				<script>libraries.APPanel.APDiscSoft();</script>
+				<script>libraries.APPanel.APDisc();</script>
 			</binding>
 		</button>
 	</group>
