@@ -262,6 +262,19 @@
 			</test>
 		</switch>
 		
+		<pid name="fbw/pitch/vc-kts-rate">
+			<descripton>Use D only to calculate rate of IAS</descripton>
+			<input>velocities/vc-kts</input>
+			<kp>0.0</kp>
+			<ki>0.0</ki>
+			<kd>1.0</kd>
+		</pid>
+		
+		<lag_filter name="fbw/pitch/vc-kts-rate-lag">
+			<input>fbw/pitch/vc-kts-rate</input>
+			<c1>1.0</c1>
+		</lag_filter>
+		
 	</channel>
 	
 	<channel name="FBW: Roll">
@@ -655,11 +668,23 @@
 	
 	<channel name="FBW: Pitch">
 		
+		<switch name="fbw/pitch/elevator-max"> <!-- Prevent pitch down -->
+			<default value="1"/>
+			<test logic="AND" value="0">
+				/it-fbw/law eq 0
+				/it-fbw/protections/overspeed eq 1
+			</test>
+		</switch>
+		
 		<switch name="fbw/pitch/e-i-f">
 			<default value="/controls/flight/elevator"/>
 			<test value="0">
 				fbw/fmgc/enabled eq 1
 			</test>
+			<clipto>
+				<min>-1.0</min>
+				<max>fbw/pitch/elevator-max</max>
+			</clipto>
 		</switch>
 		
 		<kinematic name="fbw/pitch/e-i-k">
@@ -754,6 +779,10 @@
 				fbw/fmgc/enabled eq 1
 				position/wow eq 1
 			</test>
+			<clipto>
+				<min>-1.0</min>
+				<max>fbw/pitch/elevator-max</max>
+			</clipto>
 		</switch>
 		
 		<kinematic name="fbw/pitch/e-i">
@@ -888,16 +917,18 @@
 				<sum>
 					<table>
 						<independentVar lookup="row">fbw/pitch/g-pi-switched</independentVar>
+						<independentVar lookup="column">fbw/pitch/vc-kts-rate-lag</independentVar>
 						<tableData>
-							-1.0  0.087266
-							 0.0  0.026180
+							     -2        -1
+							-1.0  0.087266  0.087266
+							 0.0  0.000000  0.026180
 						</tableData>
 					</table>
 					<table>
 						<independentVar lookup="row">attitude/pitch-rad</independentVar>
 						<independentVar lookup="column">fbw/pitch/g-pi-switched</independentVar>
 						<tableData>
-							          -1         0       
+							          -1         0
 							 0.436332 -0.026180  0.000000
 							 0.523599 -0.087266  0.000000
 						</tableData>
@@ -917,10 +948,12 @@
 			<function>
 				<table>
 					<independentVar lookup="row">fbw/pitch/g-pi-switched</independentVar>
+					<independentVar lookup="column">fbw/pitch/vc-kts-rate-lag</independentVar>
 					<tableData>
-						-1.0  0.087266
-						 0.0  0.026180
-						 1.0 -0.061086
+						     -2        -1
+						-1.0  0.087266  0.087266
+						 0.0  0.000000  0.026180
+						 1.0 -0.061086 -0.087266
 					</tableData>
 				</table>
 			</function>

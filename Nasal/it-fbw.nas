@@ -221,14 +221,14 @@ var update_loop = func {
 	}
 	
 	if (getprop("/instrumentation/airspeed-indicator/indicated-speed-kt") > getprop("/it-fbw/speeds/vmo-mmo") + 6 and (law == 0 or law == 1)) {
-		if (getprop("/it-fbw/protections/overspeed") != 1) {
-			setprop("/it-fbw/protections/overspeed", 1);
-		}
 		if (getprop("/it-autoflight/output/ap1") == 1) {
 			setprop("/it-autoflight/input/ap1", 0);
 		}
 		if (getprop("/it-autoflight/output/ap2") == 1) {
 			setprop("/it-autoflight/input/ap2", 0);
+		}
+		if (getprop("/it-fbw/protections/overspeed") != 1) {
+			setprop("/it-fbw/protections/overspeed", 1);
 		}
 	} else {
 		if (getprop("/it-fbw/protections/overspeed") != 0) {
