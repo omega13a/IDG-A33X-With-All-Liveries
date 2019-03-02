@@ -662,6 +662,9 @@
 			<annun-test>0</annun-test>
 			<windowprobeheat type="double">0.5</windowprobeheat>
 			<strobe type="double">0.0</strobe>
+			<beacon type="bool">0</beacon>
+			<wing-lights type="bool">0</wing-lights>
+			<landing-lights type="float">0.0</landing-lights>
 		</switches>
 		<tray n="0">
 			<lefttrayext type="double">0</lefttrayext>
@@ -1054,11 +1057,7 @@
 				<desc>Autothrottle Disconnect</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						if (getprop("/it-autoflight/output/athr") == 1) {
-							setprop("/it-autoflight/input/athr", 0);
-						}
-					</script>
+					<script>libraries.APPanel.ATDisc();</script>
 				</binding>
 			</key>
 			<key n="6">
@@ -1297,14 +1296,7 @@
 				<desc>Autopilot Disconnect</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						if (getprop("/it-autoflight/output/ap1") == 1) {
-							setprop("/it-autoflight/input/ap1", 0);
-						}
-						if (getprop("/it-autoflight/output/ap2") == 1) {
-							setprop("/it-autoflight/input/ap2", 0);
-						}
-					</script>
+					<script>libraries.APPanel.APDisc();</script>
 				</binding>
 			</key>
 			<key n="70">

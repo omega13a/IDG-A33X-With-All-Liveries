@@ -40,6 +40,7 @@ setprop("/engines/engine[1]/oil-qt-actual", qty2);
 ##########
 
 var beacon_switch = props.globals.getNode("/controls/switches/beacon", 1);
+var beacon_ctl = props.globals.getNode("/controls/lighting/beacon", 1);
 var beacon = aircraft.light.new("/sim/model/lights/beacon", [0.1, 1], "/controls/lighting/beacon");
 var strobe_switch = props.globals.getNode("/controls/switches/strobe", 1);
 var strobe = aircraft.light.new("/sim/model/lights/strobe", [0.05, 0.06, 0.05, 1], "/controls/lighting/strobe");
@@ -47,6 +48,8 @@ var strobe_light = props.globals.getNode("/controls/lighting/strobe", 1);
 var tail_strobe = aircraft.light.new("/sim/model/lights/tailstrobe", [0.1, 1], "/controls/lighting/strobe");
 var logo_lights = getprop("/sim/model/lights/logo-lights");
 var nav_lights = props.globals.getNode("/sim/model/lights/nav-lights");
+var wing_switch = props.globals.getNode("/controls/switches/wing-lights", 1);
+var wing_ctl = props.globals.getNode("/controls/lighting/wing-lights", 1);
 var dome_light = props.globals.initNode("/sim/model/lights/dome-light", 0.0, "DOUBLE");
 var wow = getprop("/gear/gear[2]/wow");
 var slats = getprop("/controls/flight/slats");
@@ -58,7 +61,8 @@ var settingT = getprop("/controls/lighting/taxi-light-switch");
 var settingTurnoff = getprop("/controls/lighting/turnoff-light-switch");
 var setting = getprop("/controls/lighting/nav-lights-switch");
 var domeSetting = getprop("/controls/lighting/dome-norm");
-var land = getprop("/controls/lighting/landing-lights[1]");
+var land = props.globals.getNode("/controls/lighting/landing-lights[1]", 1);
+var landSw = props.globals.getNode("/controls/switches/landing-lights", 1);
 
 ###################
 # Tire Smoke/Rain #
@@ -468,6 +472,11 @@ var lightsLoop = maketimer(0.2, func {
 	domeSetting = getprop("/controls/lighting/dome-norm");
 
 	# nose lights
+	if (getprop("/systems/electrical/bus/ac1") > 0 or getprop("/systems/electrical/bus/ac2") > 0  or getprop("/systems/electrical/bus/dc1") > 0 or getprop("/systems/electrical/bus/dc2") > 0) {
+		setprop("/systems/electrical/nav-lights-power", 1);
+	} else { 
+		setprop("/systems/electrical/nav-lights-power", 0);
+	}
 	
 	if (settingT == 0.5 and gear > 0.9 and (getprop("/systems/electrical/bus/ac1") > 0 or getprop("/systems/electrical/bus/ac2") > 0)) {
 		setprop("/sim/model/lights/nose-lights", 0.85);
@@ -536,13 +545,37 @@ var lightsLoop = maketimer(0.2, func {
 	# strobe
 	strobe_sw = strobe_switch.getValue();
 	
-	if (strobe_sw == 1) {
+	if (strobe_sw == 1 and getprop("/systems/electrical/bus/ac2") > 0) {
 		strobe_light.setValue(1);
-	} elsif (strobe_sw == 0.5 and getprop("/gear/gear[1]/wow") == 0 and getprop("/gear/gear[2]/wow") == 0) {
+	} elsif (strobe_sw == 0.5 and getprop("/gear/gear[1]/wow") == 0 and getprop("/gear/gear[2]/wow") == 0 and getprop("/systems/electrical/bus/ac2") > 0) {
 		# todo: use lgciu output 5
 		strobe_light.setValue(1);
 	} else {
 		strobe_light.setValue(0);
+	}
+	
+	# beacon
+	
+	if (beacon_switch.getValue() == 1 and (getprop("/systems/electrical/bus/ac1") > 0 or getprop("/systems/electrical/bus/ac2") > 0)) {
+		beacon_ctl.setValue(1);
+	} else {
+		beacon_ctl.setValue(0);
+	}
+	
+	# wing
+	
+	if (wing_switch.getValue() == 1 and getprop("/systems/electrical/bus/ac1") > 0 and getprop("/systems/electrical/bus/ac2") > 0) {
+		wing_ctl.setValue(1);
+	} else {
+		wing_ctl.setValue(0);
+	}
+	
+	# land
+	
+	if (landSw.getValue() == 1 and (getprop("/systems/electrical/bus/ac1") > 0 or getprop("/systems/electrical/bus/ac2") > 0)) {
+		land.setValue(1);
+	} else {
+		land.setValue(0);
 	}
 	
 	# signs
