@@ -186,9 +186,9 @@
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
-						     0   1
-						140  15  0
-						330   4  0
+						     0    1
+						140  5.0  0.0
+						330  1.5  0.0
 					</tableData>
 				</table>
 			</function>
@@ -200,9 +200,9 @@
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
-						     0   1
-						140  18  0
-						330   7  0
+						     0    1
+						140  10.0  0.0
+						330   3.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -1272,8 +1272,13 @@
 			</test>
 		</switch>
 		
+		<washout_filter name="fbw/yaw/r-washout">
+			<input>velocities/r-rad_sec</input>
+			<c1>0.5</c1>
+		</washout_filter>
+		
 		<switch name="fbw/yaw/r-r_s-s">
-			<default value="velocities/r-rad_sec"/>
+			<default value="fbw/yaw/r-washout"/>
 			<test logic="OR" value="0">
 				position/wow eq 1
 				fbw/yaw/rudder-nul gt 0
@@ -1287,8 +1292,8 @@
 			<input>fbw/yaw/r-r_s-s</input>
 			<gain>fbw/yaw/yd-p-gain</gain>
 			<clipto>
-				<min>-0.1</min>
-				<max>0.1</max>
+				<min>-0.5</min>
+				<max>0.5</max>
 			</clipto>
 		</pure_gain>
 		
