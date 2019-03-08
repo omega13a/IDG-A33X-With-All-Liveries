@@ -1,5 +1,4 @@
 <!-- Airbus A330-200 Aerodynamics -->
-<!-- Joshua Davidson (it0uchpods) -->
 
 <!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
@@ -128,7 +127,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<toradians><property>fcs/spoiler-left-deg</property></toradians>
-				<value>-0.0349066</value>
+				<value>-0.0279253</value>
 			</product>
 		</function>
 		
@@ -138,7 +137,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<toradians><property>fcs/spoiler-right-deg</property></toradians>
-				<value>-0.0349066</value>
+				<value>-0.0279253</value>
 			</product>
 		</function>
 		
@@ -352,7 +351,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<toradians><property>fcs/spoiler-left-deg</property></toradians>
-				<value>0.0184331039004655</value>
+				<value>0.0147464831203724</value>
 			</product>
 		</function>
 		
@@ -362,7 +361,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<toradians><property>fcs/spoiler-right-deg</property></toradians>
-				<value>0.0184331039004655</value>
+				<value>0.0147464831203724</value>
 			</product>
 		</function>
 		
@@ -547,7 +546,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<toradians><property>fcs/spoiler-left-deg</property></toradians>
-				<value>-0.046</value>
+				<value>-0.0368</value>
 			</product>
 		</function>
 		
@@ -558,7 +557,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<toradians><property>fcs/spoiler-right-deg</property></toradians>
-				<value>0.046</value>
+				<value>0.0368</value>
 			</product>
 		</function>
 		

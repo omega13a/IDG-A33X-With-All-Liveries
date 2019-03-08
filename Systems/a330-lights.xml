@@ -1,13 +1,6 @@
-<!-- Airbus A320 FCS -->
-<!-- Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Jonathan Redpath (legoboyvdlp) -->
 
-<!--
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
--->
-
-<system name="A320: Lights">
+<system name="A330: Lights">
 
 	<channel name="Lights">
 		<switch name="lights/reading-light">

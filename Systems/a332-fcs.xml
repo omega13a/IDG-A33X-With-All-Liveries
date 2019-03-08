@@ -1,5 +1,4 @@
 <!-- Airbus A330-200 FCS/FBW -->
-<!-- Joshua Davidson (it0uchpods) -->
 
 <!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
@@ -89,8 +88,8 @@
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0     1  
-						140 -22.4  0.0
-						330  -4.5  0.0
+						140 -20.0  0.0
+						330  -4.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -103,8 +102,8 @@
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						140 -45.5  0.0
-						330 -23.0  0.0
+						140 -35.0  0.0
+						330 -10.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -117,8 +116,8 @@
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						140 -2.1  0.0
-						330 -0.1  0.0
+						140 -2.2  0.0
+						330 -0.5  0.0
 					</tableData>
 				</table>
 			</function>
@@ -131,8 +130,8 @@
 					<independentVar lookup="column">fbw/pitch/gain-switch</independentVar>
 					<tableData>
 						     0   1  
-						0.2  31  0
-						0.9  25  0
+						0.2  30  0
+						0.9  20  0
 					</tableData>
 				</table>
 			</function>
@@ -145,8 +144,8 @@
 					<independentVar lookup="column">fbw/pitch/gain-switch</independentVar>
 					<tableData>
 						     0   1
-						0.2  61  0
-						0.9  45  0
+						0.2  60  0
+						0.9  40  0
 					</tableData>
 				</table>
 			</function>
@@ -159,8 +158,8 @@
 					<independentVar lookup="column">fbw/pitch/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						0.2  2.9  0.0
-						0.9  0.7  0.0
+						0.2  2.0  0.0
+						0.9  0.5  0.0
 					</tableData>
 				</table>
 			</function>
@@ -1442,7 +1441,7 @@
 		
 		<actuator name="hydraulics/aileron-out-l/final-actuator">
 			<input>hydraulics/aileron-out-l/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/aileron-out-l/final-deg</output>
 		</actuator>
@@ -1499,7 +1498,7 @@
 		
 		<actuator name="hydraulics/aileron-in-l/final-actuator">
 			<input>hydraulics/aileron-in-l/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/aileron-in-l/final-deg</output>
 		</actuator>
@@ -1559,7 +1558,7 @@
 		
 		<actuator name="hydraulics/aileron-in-r/final-actuator">
 			<input>hydraulics/aileron-in-r/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/aileron-in-r/final-deg</output>
 		</actuator>
@@ -1619,7 +1618,7 @@
 		
 		<actuator name="hydraulics/aileron-out-r/final-actuator">
 			<input>hydraulics/aileron-out-r/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/aileron-out-r/final-deg</output>
 		</actuator>
@@ -1678,7 +1677,7 @@
 		
 		<actuator name="hydraulics/elevator-l/final-actuator">
 			<input>hydraulics/elevator-l/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/elevator-l/final-deg</output>
 		</actuator>
@@ -1717,7 +1716,7 @@
 		
 		<actuator name="hydraulics/elevator-r/final-actuator">
 			<input>hydraulics/elevator-r/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>82</rate_limit>
 			<lag>26.5</lag>
 			<output>hydraulics/elevator-r/final-deg</output>
 		</actuator>
@@ -1816,7 +1815,7 @@
 		
 		<actuator name="hydraulics/rudder/final-actuator">
 			<input>hydraulics/rudder/cmd-deg</input>
-			<rate_limit>150</rate_limit>
+			<rate_limit>80</rate_limit>
 			<lag>25.5</lag>
 			<output>hydraulics/rudder/final-deg</output>
 		</actuator>
