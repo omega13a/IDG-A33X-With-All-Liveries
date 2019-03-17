@@ -50,7 +50,7 @@ var variousReset = func {
 	setprop("/controls/lighting/DU/du6", 1);
 	setprop("/controls/lighting/DU/mcdu1", 1);
 	setprop("/controls/lighting/DU/mcdu2", 1);
-	setprop("/modes/fcu/hdg-time", 0);
+	setprop("/modes/fcu/hdg-time", -45);
 	setprop("/controls/switching/ATTHDG", 0);
 	setprop("/controls/switching/AIRDATA", 0);
 	setprop("/controls/switches/no-smoking-sign", 1);
@@ -289,20 +289,20 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 			var ias = iasNow.getValue();
 			var mach = machNow.getValue();
 			if (!ktsMach.getBoolValue()) {
-				if (ias >= 100 and ias <= 350) {
+				if (ias >= 100 and ias <= 330) {
 					iasSet.setValue(math.round(ias));
 				} else if (ias < 100) {
 					iasSet.setValue(100);
-				} else if (ias > 350) {
-					iasSet.setValue(350);
+				} else if (ias > 330) {
+					iasSet.setValue(330);
 				}
 			} else if (ktsMach.getBoolValue()) {
-				if (mach >= 0.50 and mach <= 0.82) {
+				if (mach >= 0.50 and mach <= 0.86) {
 					machSet.setValue(math.round(mach, 0.001));
 				} else if (mach < 0.50) {
 					machSet.setValue(0.50);
-				} else if (mach > 0.82) {
-					machSet.setValue(0.82);
+				} else if (mach > 0.86) {
+					machSet.setValue(0.86);
 				}
 			}
 		}
@@ -323,8 +323,8 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 					}
 					if (machTemp < 0.50) {
 						machSet.setValue(0.50);
-					} else if (machTemp > 0.82) {
-						machSet.setValue(0.82);
+					} else if (machTemp > 0.86) {
+						machSet.setValue(0.86);
 					} else {
 						machSet.setValue(machTemp);
 					}
@@ -341,8 +341,8 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 					}
 					if (iasTemp < 100) {
 						iasSet.setValue(100);
-					} else if (iasTemp > 350) {
-						iasSet.setValue(350);
+					} else if (iasTemp > 330) {
+						iasSet.setValue(330);
 					} else {
 						iasSet.setValue(iasTemp);
 					}
@@ -362,10 +362,8 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 			if (fd1.getBoolValue() or fd2.getBoolValue() or ap1.getBoolValue() or ap2.getBoolValue()) {
 				if (latMode.getValue() == 0 or !showHDG.getBoolValue()) {
 					setprop("/it-autoflight/input/lat", 3);
-					showHDG.setBoolValue(1);
 				} else {
 					setprop("/it-autoflight/input/lat", 0);
-					showHDG.setBoolValue(1);
 				}
 			}
 		}
@@ -403,26 +401,26 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 				if (latMode.getValue() == 2) {
 					setprop("/it-autoflight/input/lat", 0);
 				} else {
-					fmgc.disarmLOC();
+					fmgc.ITAF.disarmLOC();
 				}
 				if (vertTemp == 2 or vertTemp == 6) {
 					me.VSPull();
 				} else {
-					fmgc.disarmGS();
+					fmgc.ITAF.disarmGS();
 				}
 			} else {
 				setprop("/it-autoflight/input/lat", 2);
 				if (vertTemp == 2 or vertTemp == 6) {
 					me.VSPull();
 				} else {
-					fmgc.disarmGS();
+					fmgc.ITAF.disarmGS();
 				}
 			}
 		}
 	},
 	TRKFPA: func() {
 		if (dcEss.getValue() >= 25) {
-			fmgc.toggle_trkfpa();
+			fmgc.ITAF.toggleTrkFpa();
 		}
 	},
 	ALTPush: func() {
@@ -539,12 +537,12 @@ var APPanel = { # Commented stuff because the more advanced disconnect logic is 
 				if (latMode.getValue() == 2) {
 					setprop("/it-autoflight/input/lat", 0);
 				} else {
-					fmgc.disarmLOC();
+					fmgc.ITAF.disarmLOC();
 				}
 				if (vertTemp == 2 or vertTemp == 6) {
 					me.VSPull();
 				} else {
-					fmgc.disarmGS();
+					fmgc.ITAF.disarmGS();
 				}
 			} else {
 				setprop("/it-autoflight/input/vert", 2);

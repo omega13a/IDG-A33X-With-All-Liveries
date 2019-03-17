@@ -1,5 +1,4 @@
 <!-- Airbus A330 FCS -->
-<!-- Joshua Davidson (it0uchpods) -->
 
 <!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
@@ -121,17 +120,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l1/final">
+		<pure_gain name="hydraulics/spoiler-l1/cmd-deg">
 			<input>hydraulics/spoiler-l1/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l1/final-gain">
-			<input>hydraulics/spoiler-l1/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l1/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l1/final-actuator">
+			<input>hydraulics/spoiler-l1/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l1/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -182,17 +181,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l2/final">
+		<pure_gain name="hydraulics/spoiler-l2/cmd-deg">
 			<input>hydraulics/spoiler-l2/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l2/final-gain">
-			<input>hydraulics/spoiler-l2/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l2/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l2/final-actuator">
+			<input>hydraulics/spoiler-l2/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l2/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -243,17 +242,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l3/final">
+		<pure_gain name="hydraulics/spoiler-l3/cmd-deg">
 			<input>hydraulics/spoiler-l3/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l3/final-gain">
-			<input>hydraulics/spoiler-l3/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l3/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l3/final-actuator">
+			<input>hydraulics/spoiler-l3/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l3/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -308,17 +307,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l4/final">
+		<pure_gain name="hydraulics/spoiler-l4/cmd-deg">
 			<input>hydraulics/spoiler-l4/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l4/final-gain">
-			<input>hydraulics/spoiler-l4/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l4/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l4/final-actuator">
+			<input>hydraulics/spoiler-l4/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l4/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -373,17 +372,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l5/final">
+		<pure_gain name="hydraulics/spoiler-l5/cmd-deg">
 			<input>hydraulics/spoiler-l5/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l5/final-gain">
-			<input>hydraulics/spoiler-l5/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l5/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l5/final-actuator">
+			<input>hydraulics/spoiler-l5/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l5/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -438,17 +437,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-l6/final">
+		<pure_gain name="hydraulics/spoiler-l6/cmd-deg">
 			<input>hydraulics/spoiler-l6/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-l6/final-gain">
-			<input>hydraulics/spoiler-l6/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-l6/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-l6/final-actuator">
+			<input>hydraulics/spoiler-l6/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-l6/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -467,17 +466,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r1/final">
+		<pure_gain name="hydraulics/spoiler-r1/cmd-deg">
 			<input>hydraulics/spoiler-r1/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r1/final-gain">
-			<input>hydraulics/spoiler-r1/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r1/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r1/final-actuator">
+			<input>hydraulics/spoiler-r1/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r1/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -528,17 +527,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r2/final">
+		<pure_gain name="hydraulics/spoiler-r2/cmd-deg">
 			<input>hydraulics/spoiler-r2/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r2/final-gain">
-			<input>hydraulics/spoiler-r2/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r2/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r2/final-actuator">
+			<input>hydraulics/spoiler-r2/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r2/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -589,17 +588,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r3/final">
+		<pure_gain name="hydraulics/spoiler-r3/cmd-deg">
 			<input>hydraulics/spoiler-r3/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r3/final-gain">
-			<input>hydraulics/spoiler-r3/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r3/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r3/final-actuator">
+			<input>hydraulics/spoiler-r3/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r3/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -654,17 +653,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r4/final">
+		<pure_gain name="hydraulics/spoiler-r4/cmd-deg">
 			<input>hydraulics/spoiler-r4/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r4/final-gain">
-			<input>hydraulics/spoiler-r4/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r4/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r4/final-actuator">
+			<input>hydraulics/spoiler-r4/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r4/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -719,17 +718,17 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r5/final">
+		<pure_gain name="hydraulics/spoiler-r5/cmd-deg">
 			<input>hydraulics/spoiler-r5/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r5/final-gain">
-			<input>hydraulics/spoiler-r5/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r5/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r5/final-actuator">
+			<input>hydraulics/spoiler-r5/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r5/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
@@ -784,29 +783,29 @@
 			</clipto>
 		</switch>
 		
-		<actuator name="hydraulics/spoiler-r6/final">
+		<pure_gain name="hydraulics/spoiler-r6/cmd-deg">
 			<input>hydraulics/spoiler-r6/switch</input>
-			<rate_limit>1.1</rate_limit>
-			<lag>16.3</lag>
-		</actuator>
-		
-		<pure_gain name="hydraulics/spoiler-r6/final-gain">
-			<input>hydraulics/spoiler-r6/final</input>
-			<gain>40.0</gain>
-			<output>hydraulics/spoiler-r6/final-deg</output>
+			<gain>50.0</gain>
 		</pure_gain>
+		
+		<actuator name="hydraulics/spoiler-r6/final-actuator">
+			<input>hydraulics/spoiler-r6/cmd-deg</input>
+			<rate_limit>38</rate_limit>
+			<lag>26.5</lag>
+			<output>hydraulics/spoiler-r6/final-deg</output>
+		</actuator>
 	
 	</channel>
 	
 	<channel name="Output">
 		
 		<summer name="fcs/spoiler-left-sum">
-			<input>hydraulics/spoiler-l1/final-gain</input>
-			<input>hydraulics/spoiler-l2/final-gain</input>
-			<input>hydraulics/spoiler-l3/final-gain</input>
-			<input>hydraulics/spoiler-l4/final-gain</input>
-			<input>hydraulics/spoiler-l5/final-gain</input>
-			<input>hydraulics/spoiler-l6/final-gain</input>
+			<input>hydraulics/spoiler-l1/final-actuator</input>
+			<input>hydraulics/spoiler-l2/final-actuator</input>
+			<input>hydraulics/spoiler-l3/final-actuator</input>
+			<input>hydraulics/spoiler-l4/final-actuator</input>
+			<input>hydraulics/spoiler-l5/final-actuator</input>
+			<input>hydraulics/spoiler-l6/final-actuator</input>
 		</summer>
 		
 		<fcs_function name="fcs/spoiler-left-deg">
@@ -819,12 +818,12 @@
 		</fcs_function>
 		
 		<summer name="fcs/spoiler-right-sum">
-			<input>hydraulics/spoiler-r1/final-gain</input>
-			<input>hydraulics/spoiler-r2/final-gain</input>
-			<input>hydraulics/spoiler-r3/final-gain</input>
-			<input>hydraulics/spoiler-r4/final-gain</input>
-			<input>hydraulics/spoiler-r5/final-gain</input>
-			<input>hydraulics/spoiler-r6/final-gain</input>
+			<input>hydraulics/spoiler-r1/final-actuator</input>
+			<input>hydraulics/spoiler-r2/final-actuator</input>
+			<input>hydraulics/spoiler-r3/final-actuator</input>
+			<input>hydraulics/spoiler-r4/final-actuator</input>
+			<input>hydraulics/spoiler-r5/final-actuator</input>
+			<input>hydraulics/spoiler-r6/final-actuator</input>
 		</summer>
 		
 		<fcs_function name="fcs/spoiler-right-deg">

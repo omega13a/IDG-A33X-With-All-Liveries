@@ -2974,7 +2974,7 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>it-autoflight/input/lat-arm</property>
+					<property>it-autoflight/output/lnav-armed</property>
 					<value>1</value>
 				</equals>
 			</or>
