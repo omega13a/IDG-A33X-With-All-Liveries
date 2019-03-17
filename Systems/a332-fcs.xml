@@ -2106,17 +2106,18 @@
 					</eq>
 					<product>
 						<property>hydraulics/tiller/autopush-cmd</property>
-						<value>70</value>
+						<value>75</value>
 					</product>
 					<table>
 						<independentVar lookup="row">/velocities/groundspeed-kt</independentVar>
 						<independentVar lookup="column">hydraulics/tiller/switch</independentVar>
 						<tableData>
-								   -1     0    1
-							 0.500  00.0  0.0  00.0
-							 1.000 -70.0  0.0  70.0
-							30.000 -70.0  0.0  70.0
-							30.001 -10.0  0.0  10.0
+							        -1   0   1
+							  0.500   0  0   0
+							  1.000 -75  0  75
+							 30.000 -47  0  47
+							 30.001  -6  0   6
+							135.000   0  0   0
 						</tableData>
 					</table>
 				</ifthen>
