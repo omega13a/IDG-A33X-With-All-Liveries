@@ -86,8 +86,8 @@ var Input = {
 	altDiff: 0,
 	bankLimitSW: props.globals.initNode("/it-autoflight/input/bank-limit-sw", 0, "INT"),
 	bankLimitSWTemp: 0,
-	fd1: props.globals.initNode("/it-autoflight/input/fd1", 0, "BOOL"),
-	fd2: props.globals.initNode("/it-autoflight/input/fd2", 0, "BOOL"),
+	fd1: props.globals.initNode("/it-autoflight/input/fd1", 1, "BOOL"),
+	fd2: props.globals.initNode("/it-autoflight/input/fd2", 1, "BOOL"),
 	fpa: props.globals.initNode("/it-autoflight/input/fpa", 0, "DOUBLE"),
 	hdg: props.globals.initNode("/it-autoflight/input/hdg", 0, "INT"),
 	ias: props.globals.initNode("/it-autoflight/input/spd-kts", 250, "INT"),
@@ -133,9 +133,9 @@ var Output = {
 	apprArm: props.globals.initNode("/it-autoflight/output/appr-armed", 0, "BOOL"),
 	athr: props.globals.initNode("/it-autoflight/output/athr", 0, "BOOL"),
 	athrTemp: 0,
-	fd1: props.globals.initNode("/it-autoflight/output/fd1", 0, "BOOL"),
+	fd1: props.globals.initNode("/it-autoflight/output/fd1", 1, "BOOL"),
 	fd1Temp: 0,
-	fd2: props.globals.initNode("/it-autoflight/output/fd2", 0, "BOOL"),
+	fd2: props.globals.initNode("/it-autoflight/output/fd2", 1, "BOOL"),
 	fd2Temp: 0,
 	lat: props.globals.initNode("/it-autoflight/output/lat", 5, "INT"),
 	latTemp: 5,
@@ -191,8 +191,8 @@ var ITAF = {
 		Input.ap1.setBoolValue(0);
 		Input.ap2.setBoolValue(0);
 		Input.athr.setBoolValue(0);
-		Input.fd1.setBoolValue(0);
-		Input.fd2.setBoolValue(0);
+		Input.fd1.setBoolValue(1);
+		Input.fd2.setBoolValue(1);
 		Input.hdg.setValue(360);
 		Input.alt.setValue(10000);
 		Input.vs.setValue(0);
@@ -206,8 +206,8 @@ var ITAF = {
 		Output.ap1.setBoolValue(0);
 		Output.ap2.setBoolValue(0);
 		Output.athr.setBoolValue(0);
-		Output.fd1.setBoolValue(0);
-		Output.fd2.setBoolValue(0);
+		Output.fd1.setBoolValue(1);
+		Output.fd2.setBoolValue(1);
 		Output.lnavArm.setBoolValue(0);
 		Output.locArm.setBoolValue(0);
 		Output.apprArm.setBoolValue(0);
@@ -859,6 +859,7 @@ var ITAF = {
 		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue() and !Output.fd1.getBoolValue() and !Output.fd2.getBoolValue()) {
 			me.setLatMode(9);
 			me.setVertMode(9);
+			me.setLatArm(0);
 			Custom.Output.fmaPower.setBoolValue(0);
 		} else {
 			Custom.Output.fmaPower.setBoolValue(1);

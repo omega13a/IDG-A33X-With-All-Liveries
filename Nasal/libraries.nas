@@ -190,15 +190,13 @@ var systemsInit = func {
 	systems.fire_init();
 	systems.autobrake_init();
 	fadec.FADEC.init();
-  	fmgc.ITAF.init();
+	fmgc.ITAF.init();
 	fmgc.FMGCinit();
 	mcdu.MCDU_init(0);
 	mcdu.MCDU_init(1);
 	systemsLoop.start();
 	icing.icingInit();
 	lightsLoop.start();
-	setprop("/it-autoflight/input/fd1", 1);
-	setprop("/it-autoflight/input/fd2", 1);
 	libraries.ECAM.init();
 	libraries.BUTTONS.init();
 	libraries.variousReset();
