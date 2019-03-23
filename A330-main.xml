@@ -580,6 +580,7 @@
 			<brake-parking type="bool">0</brake-parking>
 			<tiller-cmd-norm type="double">0</tiller-cmd-norm>
 			<tiller-enabled type="bool">0</tiller-enabled>
+			<nws-switch type="double">1</nws-switch>
 		</gear>
 		<lighting>
 			<DU>
@@ -743,6 +744,7 @@
 		<electrical n="0">
 			<bus n="0">
 				<dc-ess>0</dc-ess>
+				<dc-ess-shed>0</dc-ess-shed>
 				<dc1>0</dc1>
 				<dc2>0</dc2>
 			</bus>

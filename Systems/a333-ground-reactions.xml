@@ -14,7 +14,7 @@
 		<rolling_friction> 0.02 </rolling_friction>
 		<spring_coeff unit="LBS/FT"> 53871.1 </spring_coeff>
 		<damping_coeff unit="LBS/FT/SEC"> 39957.3 </damping_coeff>
-		<max_steer unit="DEG"> 75 </max_steer>
+		<max_steer unit="DEG"> 65 </max_steer>
 		<table name="CORNERING_COEFF" type="internal">
 			<tableData> <!-- jsbsim-pacejka.py 3.0 0.03 2.85 1.4 1.03 1.4 -->
 				-90.0 -0.64429852792097750
