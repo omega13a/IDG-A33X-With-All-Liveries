@@ -744,6 +744,7 @@
 		<electrical n="0">
 			<bus n="0">
 				<dc-ess>0</dc-ess>
+				<dc-ess-shed>0</dc-ess-shed>
 				<dc1>0</dc1>
 				<dc2>0</dc2>
 			</bus>
