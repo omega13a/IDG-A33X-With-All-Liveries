@@ -10,7 +10,7 @@ This error occurs if you are attempting to use this IDG Aircraft on a version of
 
 This error occurs when there is an issue with the scenery that prevents initialization, or if you are starting in air.
 
-Starting in air is [not possible with this aircraft](https://github.com/it0uchpods/IDG-A33X/issues/84#issuecomment-475035478).
+Starting in air is not possible with this aircraft.
 
 The simulation is so complex that there is no support for starting it in mid-air. Therefore, please make sure that you start it on the ground, powering it up appropriately.
 
@@ -58,7 +58,6 @@ IDG suggests **never** downgrading your aircraft for the best expirience. If you
 
 ### Q. I like increasing the simulation speed on long flights. However, I encounter issues with it once in a while. What's up?
 
-Increasing the simulation speed is quite tricky for the simulator. Depending on hardware capabilities it can be very stressful and the algorithms behind the scenes can be challenged quite heavily. If the simulation is running faster than the corresponding algorithms can be computed, many funny (or even [ugly things](https://github.com/it0uchpods/IDG-A33X/issues/86#issuecomment-478328407)) may happen. **IDG suggests not setting simulation speed above 4x or below 1/2x at any time**.
+Increasing the simulation speed is quite tricky for the simulator. Depending on hardware capabilities it can be very stressful and the algorithms behind the scenes can be challenged quite heavily. If the simulation is running faster than the corresponding algorithms can be computed, many funny (or even ugly things) may happen. **IDG suggests not setting simulation speed above 4x or below 1/2x at any time**.
 
 Check your frame rate ("View" menu, option "View Options", toggle "Show frame rate") when increasing the simulation speed. As a rule of thumb, if the frame rate stays constantly above 10fps, you are fine. Keep in mind that already one little phase (and not just the average) where the frame rate drops below 10 frames per second, you are in danger facing issues.
-
