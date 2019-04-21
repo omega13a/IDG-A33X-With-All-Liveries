@@ -17,3 +17,6 @@ Present pack includes the following Airbus A330 Family variants:
 - A330-343
 - Voyager KC2/KC3 (A330 MRTT)
 - KC-30A (A330 MRTT)
+
+## Frequently Asked Questions
+For answers on frequently asked questions, refer to our [FAQ page](https://github.com/it0uchpods/IDG-A33X/blob/master/FAQ.md).
