@@ -1,10 +1,10 @@
 # IDG A33X
-A very advanced simulation of the Airbus A330 Family for FlightGear by it0uchpods Design Group.
+A very advanced simulation of the Airbus A330 Family for FlightGear by Immersive Design Group.
 
-- FDM: Joshua Davidson (it0uchpods)
-- Systems: Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp)
-- Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp)
-- Instruments: Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp)
+- FDM: Joshua Davidson (Octal450)
+- Systems: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
+- Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
+- Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 
 Present pack includes the following Airbus A330 Family variants:
 - A330-203
@@ -19,4 +19,4 @@ Present pack includes the following Airbus A330 Family variants:
 - KC-30A (A330 MRTT)
 
 ## Frequently Asked Questions
-For answers on frequently asked questions, refer to our [FAQ page](https://github.com/it0uchpods/IDG-A33X/blob/master/FAQ.md).
+For answers on frequently asked questions, refer to our [FAQ page](https://github.com/Octal450/IDG-A33X/blob/master/FAQ.md).
