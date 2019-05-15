@@ -219,7 +219,7 @@
 		<object-name>radio_exchange</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>true</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>rmp.transfer(1);</script>
