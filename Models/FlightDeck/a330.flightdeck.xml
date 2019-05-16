@@ -433,6 +433,10 @@
 		<object-name>ecam_press_led</object-name>
 		<object-name>ecam_sts_led</object-name>
 		<object-name>ecam_wheel_led</object-name>
+		<object-name>engine_fault_1</object-name>
+		<object-name>engine_fault_2</object-name>
+		<object-name>engine_fire_1</object-name>
+		<object-name>engine_fire_2</object-name>
 		<object-name>exped_led</object-name>
 		<object-name>hdg-text-test</object-name>
 		<object-name>master_caution_on</object-name>
