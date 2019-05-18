@@ -70,13 +70,13 @@ var rmpUpdate = func() {
 	
 	# SEL lights
 	if (chan_rmp1_v == "vhf2" or chan_rmp1_v == "vhf3" or chan_rmp1_v == "hf1" or chan_rmp1_v == "hf2" or chan_rmp2_v == "vhf1" or chan_rmp2_v == "vhf3" or chan_rmp2_v == "hf1" or chan_rmp2_v == "hf2" or chan_rmp3_v == "vhf1" or chan_rmp3_v == "vhf2") {
-		if (sel_light_rmp1.!getBoolValue()) {
+		if (!sel_light_rmp1.getBoolValue()) {
 			sel_light_rmp1.setBoolValue(1);
 		}
-		if (sel_light_rmp2.!getBoolValue()) {
+		if (!sel_light_rmp2.getBoolValue()) {
 			sel_light_rmp2.setBoolValue(1);
 		}
-		if (sel_light_rmp3.!getBoolValue()) {
+		if (!sel_light_rmp3.getBoolValue()) {
 			sel_light_rmp3.setBoolValue(1);
 		}
 	} else {
