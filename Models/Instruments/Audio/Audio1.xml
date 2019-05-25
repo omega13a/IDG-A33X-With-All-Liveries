@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
 <PropertyList>
 
@@ -1144,7 +1144,7 @@
 	</animation>
 
 	<effect>
-		<inherits-from>Aircraft/IDG-A32X/Models/Effects/cockpit-irradiance</inherits-from>
+		<inherits-from>Aircraft/IDG-A33X/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>audio_body</object-name>
 		<object-name>audio_glare</object-name>
 		<object-name>audio_int_rad</object-name>

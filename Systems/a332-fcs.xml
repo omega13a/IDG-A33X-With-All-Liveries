@@ -1,6 +1,6 @@
 <!-- Airbus A330-200 FCS/FBW -->
 
-<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
 <system name="A332: FCS">
 	
@@ -1856,7 +1856,7 @@
 		</aerosurface_scale>
 		
 		<summer name="hydraulics/rudder/summer">
-			<input><input>fbw/rudder-output</input></input>
+			<input>fbw/rudder-output</input>
 			<input>hydraulics/rudder/trim-norm</input>
 			<clipto>
 				<min>-1</min>

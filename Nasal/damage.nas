@@ -1,8 +1,8 @@
 # IDG Damage Code
 # Author: Nikolai V. Chr. (with some improvement by Onox and Pinto)
-# Modified for IDG by Joshua Davidson (it0uchpods)
+# Modified for IDG by Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (Octal450)
 
 # Enable the damage checkbox in Aircraft Configuration
 setprop("/systems/acconfig/damage-loaded", 1);
